@@ -1,0 +1,15 @@
+<section id="page-content">
+  <div class="container">
+    <h1>Bienvenido, que deseas modificar</h1>
+    <ul>
+      <% if current_user.status == "administrador" %>
+        <li><%= link_to 'usuarios', users_path %></li>
+      <% end %>
+      <li><%= link_to 'noticias', notices_path %></li>
+      <li><%= link_to 'textos informativos', info_texts_path %></li>
+      <li><%= link_to 'portadas', covers_path %></li>
+      <li><%= link_to 'cursos', courses_path %></li>
+      <li><%= link_to 'comentarios', comments_path %></li>
+    </ul>
+  </div>
+</section>

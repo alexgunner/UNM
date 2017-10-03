@@ -1,0 +1,18 @@
+<section id="page-content">
+  <div class="container">
+    <p id="notice"><%= notice %></p>
+
+    <p>
+      <strong>Titulo:</strong>
+      <%= @cover.title %>
+    </p>
+
+    <p>
+      <strong>Descripcion:</strong>
+      <%= @cover.description %>
+    </p>
+
+    <%= link_to 'Editar portada', edit_cover_path(@cover) %> |
+    <%= link_to 'Atras', covers_path %>
+  </div>
+</section>

@@ -1,0 +1,10 @@
+<section id="page-content">
+  <div class="container">
+    <h1>Editar Comentario</h1>
+
+    <%= render 'form', comment: @comment %>
+
+    <%= link_to 'Ver comentario', @comment %> |
+    <%= link_to 'Atras', comments_path %>
+  </div>
+</section>

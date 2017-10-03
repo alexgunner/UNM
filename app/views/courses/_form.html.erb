@@ -1,0 +1,33 @@
+<%= form_for(course, local: true) do |form| %>
+  <% if course.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(course.errors.count, "error") %> prohibited this course from being saved:</h2>
+
+      <ul>
+      <% course.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nombre %>
+    <%= form.text_field :name, id: :course_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :contenido %>
+    <%= form.text_area :content, id: :course_content %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tipo %>
+    <%= form.select :type, options_for_select([ "Desarrollo personal", "Desarrollo empresarial", "Servicio al cliente",
+      "Desarrollo profesional" ], "Desarrollo personal"), id: :course_type %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit :enviar %>
+  </div>
+<% end %>

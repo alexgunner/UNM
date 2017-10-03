@@ -1,0 +1,18 @@
+<section id="page-content">
+  <div class="container">
+    <p id="notice"><%= notice %></p>
+
+    <p>
+      <strong>Nombre:</strong>
+      <%= @comment.name %>
+    </p>
+
+    <p>
+      <strong>Contenido:</strong>
+      <%= @comment.content %>
+    </p>
+
+    <%= link_to 'Editar comentario', edit_comment_path(@comment) %> |
+    <%= link_to 'Atras', comments_path %>
+  </div>
+</section>

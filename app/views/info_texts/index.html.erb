@@ -1,0 +1,36 @@
+<section id="page-content">
+  <div class="container">
+    <p id="notice"><%= notice %></p>
+
+    <h1>Textos</h1>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Titulo</th>
+          <th>Contenido</th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @info_texts.each do |info_text| %>
+          <tr>
+            <td><%= info_text.title %></td>
+            <td><%= info_text.content %></td>
+            <td><%= link_to 'Ver texto', info_text %></td>
+            <td><%= link_to 'Editar texto', edit_info_text_path(info_text) %></td>
+            <td><%= link_to 'Eliminar texto', info_text, method: :delete, data: { confirm: 'Estas seguro?' } %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+
+    <br>
+
+    <% if @info_texts.count < 3 %>
+      <%= link_to 'Agregar texto informativo', new_info_text_path %>
+    <% end %>
+    <%= link_to 'Atras', dashboard_path %>
+  </div>
+</section>

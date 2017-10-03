@@ -1,0 +1,36 @@
+<section id="page-content">
+  <div class="container">
+    <p id="notice"><%= notice %></p>
+
+    <h1>Portadas</h1>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Titulo</th>
+          <th>Descripcion</th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @covers.each do |cover| %>
+          <tr>
+            <td><%= cover.title %></td>
+            <td><%= cover.description %></td>
+            <td><%= link_to 'Ver portada', cover %></td>
+            <td><%= link_to 'Editar portada', edit_cover_path(cover) %></td>
+            <td><%= link_to 'Eliminar portada', cover, method: :delete, data: { confirm: 'Estas seguro?' } %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+
+    <br>
+
+    <% if @covers.count < 3 %>
+      <%= link_to 'Agregar portada', new_cover_path %>
+    <% end %>
+    <%= link_to 'Atras', dashboard_path %>
+  </div>
+</section>

@@ -1,0 +1,247 @@
+<header id="navigation" >
+	<div class="navbar navbar-inverse navbar-fixed-top" role="banner">
+		<div class="container">
+			<div class="navbar-header">
+				<div class="brand">
+					<img src="assets/logos/logo.png" width="100"/>
+				</div>
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+				</button>
+			</div>
+			<div class="collapse navbar-collapse normal-nav">
+				<ul class="nav navbar-nav" style="float: left;">
+					<li class="scroll"><a href="#about-us">¿Quienes somos?</a></li>
+          <li class="scroll"><a href="#academic-offers">Ofertas academicas</a></li>
+          <li class="scroll"><a href="#live-the-experience">Vive la experiencia unm</a></li>
+				</ul>
+				<h1 style="float: left;"><img src="/assets/logos/logo.png" width="130"/></h1>
+				<ul class="nav navbar-nav" style="float: left;">
+					<li class="scroll"><a href="#student-comments">Historias de la unm</a></li>
+          <li class="scroll"><a href="#notices">Noticias formativas</a></li>
+					<li class="scroll"><a href="#contact">Contactos</a></li>
+				</ul>
+			</div>
+
+		</div>
+	</div><!--/navbar-->
+</header> <!--/#navigation-->
+
+<section id="home">
+	<div class="home-pattern"></div>
+	<div id="main-carousel" class="carousel slide" data-ride="carousel">
+		<ol class="carousel-indicators">
+			<li data-target="#main-carousel" data-slide-to="0" class="active"></li>
+			<li data-target="#main-carousel" data-slide-to="1"></li>
+			<li data-target="#main-carousel" data-slide-to="2"></li>
+		</ol><!--/.carousel-indicators-->
+		<div class="carousel-inner">
+			<% @covers.each do |cover| %>
+				<% if @covers[0] == cover %>
+					<div class="item active" style="background-image: url(<%= cover.image.url %>)">
+				<% else %>
+					<div class="item" style="background-image: url(<%= cover.image.url %>)">
+				<% end %>
+					<div class="carousel-caption">
+						<div>
+							<h2 class="heading animated bounceInDown"><%= cover.title %></h2>
+							<p class="animated bounceInUp"><%= cover.description %></p>
+						</div>
+					</div>
+				</div>
+			<% end %>
+
+	  </div><!--/.carousel-inner-->
+  </div>
+
+</section><!--/#home-->
+
+<section id="about-us">
+  <div class="container">
+  	<div class="text-center">
+  		<div class="col-sm-8 col-sm-offset-2">
+  			<h2 class="title-one">¿Quienes somos?</h2>
+				<% if @whoWeAre != nil %>
+  				<p><%= @whoWeAre.content %></p>
+				<% end %>
+  		</div>
+  	</div>
+  </div>
+</section><!--/#about-us-->
+
+<section id="academic-offers">
+	<div class="row text-center">
+		<div class="col-xs-8 col-xs-offset-2">
+			<h2 class="title-one">Ofertas academicas</h2>
+			<% if @academicOffers != nil %>
+				<p><%= @academicOffers.content %></p>
+			<% end %>
+		</div>
+	</div>
+	<div id="team-carousel" class="carousel slide" data-interval="false">
+		<div class="carousel-inner team-members">
+			<div class="col-xs-12 col-sm-6 col-md-3 courses" style="background: url(assets/our-team/imagen-cursos-1.jpg) no-repeat; background-size: 100%;">
+				<div class="single-member blue-base">
+          <div>
+						<h3><a href="/list_courses/2">Desarrollo empresarial</a></h3>
+          </div>
+				</div>
+			</div>
+      <div class="col-xs-12 col-sm-6 col-md-3 courses" style="background: url(assets/our-team/imagen-cursos-2.jpg) no-repeat; background-size: 100%;">
+				<div class="single-member yellow-base">
+          <div>
+						<h3><a href="/list_courses/1">Desarrollo personal</a></h3>
+          </div>
+        </div>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-3 courses" style="background: url(assets/our-team/imagen-cursos-3.jpg) no-repeat; background-size: 100%;">
+				<div class="single-member blue-base">
+          <div>
+						<h3><a href="/list_courses/4">Desarrollo profesional</a></h3>
+          </div>
+        </div>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-3 courses" style="background: url(assets/our-team/imagen-cursos-4.jpg) no-repeat; background-size: 100%;">
+				<div class="single-member yellow-base">
+          <div>
+						<h3><a href="/list_courses/3">Servicio al cliente</a></h3>
+          </div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</section><!--/#Our-Team-->
+
+<section id="live-the-experience" class="parallax-section">
+  <div class="first-live-the-experience-bg">
+  	<div class="container">
+  		<div class="row text-center clearfix">
+  			<div class="col-sm-8 col-sm-offset-2">
+  				<h2 class="title-live-the-experience">Vive la experiencia</h2>
+          <div class="live-the-experience-icon">
+          </div>
+  			</div>
+  		</div>
+
+  	</div>
+  </div>
+  <div class="second-live-the-experience-bg">
+		<div class="container">
+			<div class="row text-center clearfix">
+        <div class="experience-container">
+					<% if @liveTheExperience != nil %>
+	  				<p><%= @liveTheExperience.content %></p>
+					<% end %>
+          <div class="logo-container">
+            <div class="experience-alliance-logo">
+              <img src="assets/logos/logo-braidot.png" width="100%"/>
+            </div>
+            <div class="experience-alliance-logo">
+              <img src="assets/logos/cmi-logo.png" width="100%"/>
+            </div>
+          </div>
+        </div>
+			</div>
+		</div>
+  </div>
+</section> <!--/#blog-->
+
+<section id="student-comments">
+  <div class="container">
+    <div class="row text-center" style="margin-bottom: 50px;">
+      <h2 class="title-one">Personas que vivieron la experiencia UNM</h2>
+      <ul class="students">
+				<% @comments.each do |comment| %>
+	        <li class="col-xs-12 col-sm-4">
+						<% if @comments[0] == comment %>
+							<img src="/assets/person1.png" class="student-small-icon student active">
+				
+						<% else %>
+							<img src="/assets/person1.png" class="student-small-icon student">
+							
+						<% end %>
+						<h3><%= comment.name %></h3>
+	        </li>
+				<% end %>
+      </ul>
+    </div>
+  </div>
+  <div class="student-comment">
+		<% @comments.each do |comment| %>
+			<% if @comments[0] == comment %>
+    		<div class="student-text active">
+			<% else %>
+				<div class="student-text active">
+			<% end %>
+      	<p><%= comment.content %></p>
+    	</div>
+		<% end %>
+  </div>
+
+</section> <!--/#portfolio-->
+
+<section id="notices">
+  <div class="container" style="width: 100%;">
+    <h3>Noticias sobre formacion</h3>
+		<% @notices.each do |notice| %>
+	    <div class="noti col-sm-3" style="background-image: url(<%= notice.image.url %>);">
+
+	      <h4><a href="<%= notice.link %>" target="_blank"><%= notice.title %></a></h4>
+	    </div>
+		<% end %>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+  	<div class="row text-center clearfix">
+  		<div class="col-sm-8 col-sm-offset-2">
+  			<div class="contact-heading">
+  				<h2 class="title-one">Contactate con nosotros</h2>
+  			</div>
+  		</div>
+  	</div>
+  </div>
+  <div class="container">
+	  <div class="contact-details">
+		  <div class="row text-center clearfix">
+  			<div class="col-sm-6">
+  				<div class="contact-address">
+            <div class="social-icons">
+  						<a class="facebook-icon" href="https://www.facebook.com/UNMNelsonMandela/" target="_blank"></a>
+  					</div>
+            <address><strong>Calle Monteagudo No 1298<br><small>( entre Hermogenes Sejas y Zenon Salinas )</small><br>Telfs: (591-4) 4664000 - 4400313<br> Cochabamba, Bolivia</strong><br></address>
+  				</div>
+  			</div>
+  			<div class="col-sm-6">
+  				<div id="contact-form-section">
+  					<div class="status alert alert-success" style="display: none"></div>
+  					<form id="contact-form" class="contact" name="contact-form" method="post" action="send-mail.php">
+  						<div class="form-group">
+  							<input type="text" name="name" class="form-control name-field" required="required" placeholder="Nombre">
+              </div>
+							<div class="form-group">
+								<input type="email" name="email" class="form-control mail-field" required="required" placeholder="Correo electronic">
+							</div>
+							<div class="form-group">
+								<textarea name="message" id="message" required="required" class="form-control" rows="8" placeholder="Mensaje"></textarea>
+							</div>
+							<div class="form-group">
+								<button type="submit" class="btn btn-primary">Enviar</button>
+							</div>
+  					</form>
+  				</div>
+  			</div>
+			</div>
+		</div>
+	</div>
+</section> <!--/#contact-->
+
+<footer id="footer">
+	<div class="container">
+		<div class="text-center">
+			<p>Copyright &copy; 2017 - Expanse | Todos los derechos reservados</p>
+		</div>
+	</div>
+</footer> <!--/#footer-->

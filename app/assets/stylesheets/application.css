@@ -1,0 +1,196 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ /*====================
+ ======Header CSS=====
+ ======================*/
+
+
+
+ #navigation .brand,
+ #navigation-2 .brand{
+ 	display: none;
+ }
+
+ #navigation-2 .navbar{
+ 	background: rgba(246, 246, 246, 0.9);
+   border-radius: 0;
+   padding-bottom: 8px;
+ }
+
+ #navigation-2 li a{
+ 	color: #909090;
+ }
+
+ #navigation-2 li a:hover{
+ 	color: #f2c34a;
+ }
+
+ /*====================
+ ======Contact CSS=====
+ ======================*/
+
+ #contact {
+ 	overflow:hidden;
+ 	background-color: #f6f6f6;
+ 	position:relative;
+ 	padding-bottom:85px;
+ 	border-top:2px solid #ddd
+ }
+
+ #contact .contact-heading {
+ 	padding-bottom:35px;
+ 	position: relative;
+ 	z-index: 10;
+ }
+
+ .contact-details {
+ 	padding-top: 25px;
+ }
+
+ .contact-address {
+ 	height:390px;
+ 	padding-top:45px;
+ 	background: url(logo-2.png) no-repeat center bottom;
+ 	background-size: 50%;
+ }
+
+ .social-icons a {
+ 	color: #A2A2A2;
+ 	font-size: 20px;
+ 	border: 1px solid #A2A2A2;
+ 	border-radius: 50%;
+ 	text-align: center;
+ 	padding: 6px;
+ 	width: 44px;
+ 	height: 44px;
+ 	display: inline-block;
+ 	margin: 2px;
+ }
+
+
+ .social-icons a:hover {
+   color: #f4c53d;
+   border: 1px solid #f4c53d;
+ }
+
+ .facebook-icon{
+ 	background: url("logo-fb-gris.png") no-repeat;
+ 	background-size: 70%;
+ 	background-position: center;
+ }
+
+ .facebook-icon:hover{
+ 	background: url("logo-fb-amarillo.png") no-repeat;
+ 	background-size: 70%;
+ 	background-position: center;
+ }
+
+ .contact-address .social-icons,
+ .contact-address address {
+ 	z-index:2;
+ 	position:relative;
+ 	margin-bottom: 10px;
+ 	color: #777;
+ }
+
+ .contact-address  p {
+ 	font-weight:800;
+ 	font-size:24px
+ }
+
+
+ #contact-form-section {
+ 	padding:35px;
+ 	background-color: #FFF;
+ 	height:390px;
+ }
+ #contact-form-section .btn-primary {
+ 	background-color: #f2c34a;
+ 	border-color:#f6f6f6;
+ 	border-radius:0;
+ 	padding:10px 35px;
+ 	text-transform:uppercase;
+ 	font-weight:800;
+ 	transition: all 0.9s ease 0s;
+   -moz-transition: all 0.9s ease 0s;
+   -webkit-transition: all 0.9s ease 0s;
+   -o-transition: all 0.9s ease 0s;
+ }
+
+ #contact-form-section .btn-primary:hover {
+ 	background-color: #29375a;
+ }
+
+ #contact-form input,
+ #contact-form textarea,
+ #contact-form .btn-primary  {
+ 	position:relative;
+ 	z-index:2;
+ }
+
+ #contact-form .name-field,
+ #contact-form .mail-field  {
+ 	width:49%;
+ }
+
+ #contact-form .name-field {
+ 	margin-right:2%;
+ 	float:left
+ }
+
+ #contact-form .mail-field {
+
+ }
+
+ #contact-form-section .form-control {
+ 	border-radius:0;
+ 	-webkit-box-shadow:none;
+ 	box-shadow:none;
+ }
+
+ #contact-form-section textarea {
+ 	resize:none
+ }
+
+ #contact-form-section .form-control:focus {
+ 	border-color: #f2c34a;
+ 	outline: 0;
+ 	-webkit-box-shadow:none;
+ 	box-shadow:none;
+ }
+
+
+ /*====================
+ ======Footer CSS=====
+ ======================*/
+
+ #footer {
+ 	background-color:#f6f6f6;
+ 	padding:25px 0;
+ 	color:#43484E;
+ 	font-size:16px;
+ 	position:relative;
+ 	margin-top:1px;
+ }
+
+ #footer p {
+ 	margin: 0
+ }
+
+ #footer a {
+ 	color:#fc7700
+ }

@@ -1,0 +1,35 @@
+<section id="page-content">
+  <div class="container">
+    <p id="notice"><%= notice %></p>
+
+    <h1>Comentarios</h1>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Contenido</th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @comments.each do |comment| %>
+          <tr>
+            <td><%= comment.name %></td>
+            <td><%= comment.content %></td>
+            <td><%= link_to 'Ver comentario', comment %></td>
+            <td><%= link_to 'Editar comentario', edit_comment_path(comment) %></td>
+            <td><%= link_to 'Eliminar comentario', comment, method: :delete, data: { confirm: 'Estas seguro?' } %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+
+    <br>
+    <% if @comments.count < 3 %>
+      <%= link_to 'Agregar comentario', new_comment_path %>
+    <% end %>
+    <%= link_to 'Atras', dashboard_path %>
+  </div>
+</section>

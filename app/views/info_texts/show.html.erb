@@ -1,0 +1,18 @@
+<section id="page-content">
+  <div class="container">
+    <p id="notice"><%= notice %></p>
+
+    <p>
+      <strong>Titulo:</strong>
+      <%= @info_text.title %>
+    </p>
+
+    <p>
+      <strong>Contenido:</strong>
+      <%= @info_text.content %>
+    </p>
+
+    <%= link_to 'Editar texto', edit_info_text_path(@info_text) %> |
+    <%= link_to 'Atras', info_texts_path %>
+  </div>
+</section>

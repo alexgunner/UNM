@@ -1,0 +1,27 @@
+<%= form_for(notice, local: true, html: { multipart: true }) do |form| %>
+  <% if notice.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(notice.errors.count, "error") %> prohibited this notice from being saved:</h2>
+
+      <ul>
+      <% notice.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :titulo %>
+    <%= form.text_field :title, id: :notice_title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :enlace %>
+    <%= form.text_field :link, id: :notice_link %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit :enviar %>
+  </div>
+<% end %>

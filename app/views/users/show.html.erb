@@ -1,0 +1,23 @@
+<section id="page-content">
+  <div class="container">
+    <p id="notice"><%= notice %></p>
+
+    <p>
+      <strong>Nombre:</strong>
+      <%= @user.name %>
+    </p>
+
+    <p>
+      <strong>Email:</strong>
+      <%= @user.email %>
+    </p>
+
+    <p>
+      <strong>Status:</strong>
+      <%= @user.status %>
+    </p>
+
+    <%= link_to 'Editar usuario', edit_user_path(@user) %> |
+    <%= link_to 'Atras', users_path %>
+  </div>
+</section>

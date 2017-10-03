@@ -1,0 +1,27 @@
+<%= form_for(info_text, local: true) do |form| %>
+  <% if info_text.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(info_text.errors.count, "error") %> prohibited this info_text from being saved:</h2>
+
+      <ul>
+      <% info_text.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :titulo %>
+    <%= form.select :title, options_for_select([ "Quienes somos", "Ofertas Academicas", "Vive la experiencia" ], "Quienes somos"), id: :info_text_title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :contenido %>
+    <%= form.text_area :content, id: :info_text_content %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit :enviar %>
+  </div>
+<% end %>
