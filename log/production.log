@@ -4461,3 +4461,138 @@ ActionController::RoutingError (No route matches [GET] "/articles/7"):
   /usr/lib/ruby/vendor_ruby/phusion_passenger/utils.rb:113:in `block in create_thread_and_abort_on_exception'
 
 
+D, [2017-10-03T16:22:40.589674 #10288] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+D, [2017-10-03T16:23:08.004927 #10290] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+D, [2017-10-03T16:23:08.096699 #10290] DEBUG -- :   [1m[35m (0.1ms)[0m  begin transaction
+D, [2017-10-03T16:23:08.110577 #10290] DEBUG -- :   [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'admin@admin.com' LIMIT 1[0m
+D, [2017-10-03T16:23:08.111833 #10290] DEBUG -- :   [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Administrador"], ["email", "admin@admin.com"], ["password_digest", "$2a$10$sOV4f346AxVD2rqLb7UAfeiSPSvTJMYlmjluIxsS/lWf0jQZMt99W"], ["created_at", "2017-10-03 16:23:08.110949"], ["updated_at", "2017-10-03 16:23:08.110949"]]
+D, [2017-10-03T16:23:08.118819 #10290] DEBUG -- :   [1m[36m (6.7ms)[0m  [1mcommit transaction[0m
+I, [2017-10-03T16:28:41.140797 #11078]  INFO -- : Started GET "/" for 190.181.36.140 at 2017-10-03 16:28:41 +0000
+I, [2017-10-03T16:28:41.153289 #11078]  INFO -- : Processing by MainController#index as HTML
+D, [2017-10-03T16:28:41.168280 #11078] DEBUG -- :   [1m[36mInfoText Load (0.2ms)[0m  [1mSELECT  "info_texts".* FROM "info_texts" WHERE "info_texts"."title" = ? LIMIT 1[0m  [["title", "Quienes somos"]]
+D, [2017-10-03T16:28:41.168595 #11078] DEBUG -- :   [1m[35mInfoText Load (0.1ms)[0m  SELECT  "info_texts".* FROM "info_texts" WHERE "info_texts"."title" = ? LIMIT 1  [["title", "Ofertas academicas"]]
+D, [2017-10-03T16:28:41.168817 #11078] DEBUG -- :   [1m[36mInfoText Load (0.1ms)[0m  [1mSELECT  "info_texts".* FROM "info_texts" WHERE "info_texts"."title" = ? LIMIT 1[0m  [["title", "Vive la experiencia"]]
+D, [2017-10-03T16:28:41.172160 #11078] DEBUG -- :   [1m[35mCover Load (0.1ms)[0m  SELECT  "covers".* FROM "covers" LIMIT 3
+D, [2017-10-03T16:28:41.172938 #11078] DEBUG -- :   [1m[36mComment Load (0.1ms)[0m  [1mSELECT  "comments".* FROM "comments" LIMIT 3[0m
+D, [2017-10-03T16:28:41.173657 #11078] DEBUG -- :   [1m[35mNotice Load (0.1ms)[0m  SELECT  "notices".* FROM "notices" LIMIT 3
+I, [2017-10-03T16:28:41.174114 #11078]  INFO -- :   Rendered main/index.html.erb within layouts/main (3.9ms)
+I, [2017-10-03T16:28:41.308077 #11078]  INFO -- : Completed 200 OK in 155ms (Views: 138.3ms | ActiveRecord: 1.3ms)
+I, [2017-10-03T16:28:41.510807 #11078]  INFO -- : Started GET "/assets/bootstrap.min.css" for 190.181.36.140 at 2017-10-03 16:28:41 +0000
+I, [2017-10-03T16:28:41.514611 #11078]  INFO -- : Started GET "/assets/animate.css" for 190.181.36.140 at 2017-10-03 16:28:41 +0000
+I, [2017-10-03T16:28:41.518544 #11078]  INFO -- : Started GET "/assets/main.css" for 190.181.36.140 at 2017-10-03 16:28:41 +0000
+I, [2017-10-03T16:28:41.522425 #11078]  INFO -- : Started GET "/assets/responsive.css" for 190.181.36.140 at 2017-10-03 16:28:41 +0000
+I, [2017-10-03T16:28:41.526488 #11078]  INFO -- : Started GET "/assets/jquery.js" for 190.181.36.140 at 2017-10-03 16:28:41 +0000
+I, [2017-10-03T16:28:41.530697 #11078]  INFO -- : Started GET "/assets/bootstrap.min.js" for 190.181.36.140 at 2017-10-03 16:28:41 +0000
+I, [2017-10-03T16:28:41.730086 #11078]  INFO -- : Started GET "/assets/jquery.parallax.js" for 190.181.36.140 at 2017-10-03 16:28:41 +0000
+I, [2017-10-03T16:28:41.735846 #11078]  INFO -- : Started GET "/assets/application.js" for 190.181.36.140 at 2017-10-03 16:28:41 +0000
+I, [2017-10-03T16:28:42.183649 #11078]  INFO -- : Started GET "/assets/logos/logo.png" for 190.181.36.140 at 2017-10-03 16:28:42 +0000
+I, [2017-10-03T16:28:42.379877 #11078]  INFO -- : Started GET "/assets/logos/logo-braidot.png" for 190.181.36.140 at 2017-10-03 16:28:42 +0000
+I, [2017-10-03T16:28:42.559106 #11078]  INFO -- : Started GET "/assets/logos/cmi-logo.png" for 190.181.36.140 at 2017-10-03 16:28:42 +0000
+I, [2017-10-03T16:28:42.572991 #11078]  INFO -- : Started GET "/assets/slider/home-pattern.png" for 190.181.36.140 at 2017-10-03 16:28:42 +0000
+I, [2017-10-03T16:28:42.578343 #11078]  INFO -- : Started GET "/assets/about-us/background-blue.jpg" for 190.181.36.140 at 2017-10-03 16:28:42 +0000
+I, [2017-10-03T16:28:42.584446 #11078]  INFO -- : Started GET "/assets/our-team/imagen-cursos-1.jpg" for 190.181.36.140 at 2017-10-03 16:28:42 +0000
+I, [2017-10-03T16:28:42.588595 #11078]  INFO -- : Started GET "/assets/our-team/unm-oferta-academica-2.png" for 190.181.36.140 at 2017-10-03 16:28:42 +0000
+I, [2017-10-03T16:28:42.593545 #11078]  INFO -- : Started GET "/assets/our-team/imagen-cursos-2.jpg" for 190.181.36.140 at 2017-10-03 16:28:42 +0000
+I, [2017-10-03T16:28:42.746684 #11078]  INFO -- : Started GET "/assets/our-team/imagen-cursos-3.jpg" for 190.181.36.140 at 2017-10-03 16:28:42 +0000
+I, [2017-10-03T16:28:42.760643 #11078]  INFO -- : Started GET "/assets/our-team/imagen-cursos-4.jpg" for 190.181.36.140 at 2017-10-03 16:28:42 +0000
+I, [2017-10-03T16:28:42.766283 #11078]  INFO -- : Started GET "/assets/clients/img-web-unm-2.jpg" for 190.181.36.140 at 2017-10-03 16:28:42 +0000
+I, [2017-10-03T16:28:42.789942 #11078]  INFO -- : Started GET "/assets/our-team/unm-oferta-academica-1.png" for 190.181.36.140 at 2017-10-03 16:28:42 +0000
+I, [2017-10-03T16:28:42.798259 #11078]  INFO -- : Started GET "/assets/clients/background-black.jpg" for 190.181.36.140 at 2017-10-03 16:28:42 +0000
+I, [2017-10-03T16:28:42.803471 #11078]  INFO -- : Started GET "/assets/logos/logo-2.png" for 190.181.36.140 at 2017-10-03 16:28:42 +0000
+I, [2017-10-03T16:28:42.955874 #11078]  INFO -- : Started GET "/assets/logos/logo-fb-gris.png" for 190.181.36.140 at 2017-10-03 16:28:42 +0000
+I, [2017-10-03T16:28:51.599114 #11078]  INFO -- : Started GET "/login" for 190.181.36.140 at 2017-10-03 16:28:51 +0000
+I, [2017-10-03T16:28:51.600564 #11078]  INFO -- : Processing by SessionsController#new as HTML
+I, [2017-10-03T16:28:51.610055 #11078]  INFO -- :   Rendered sessions/new.html.erb within layouts/application (7.0ms)
+I, [2017-10-03T16:28:51.619818 #11078]  INFO -- : Completed 200 OK in 19ms (Views: 18.9ms | ActiveRecord: 0.0ms)
+I, [2017-10-03T16:28:51.837624 #11078]  INFO -- : Started GET "/assets/application.css" for 190.181.36.140 at 2017-10-03 16:28:51 +0000
+I, [2017-10-03T16:28:51.843751 #11078]  INFO -- : Started GET "/assets/bootstrap.min.css" for 190.181.36.140 at 2017-10-03 16:28:51 +0000
+I, [2017-10-03T16:28:51.850607 #11078]  INFO -- : Started GET "/assets/animate.css" for 190.181.36.140 at 2017-10-03 16:28:51 +0000
+I, [2017-10-03T16:28:51.856915 #11078]  INFO -- : Started GET "/assets/responsive.css" for 190.181.36.140 at 2017-10-03 16:28:51 +0000
+I, [2017-10-03T16:28:51.863637 #11078]  INFO -- : Started GET "/assets/jquery.js" for 190.181.36.140 at 2017-10-03 16:28:51 +0000
+I, [2017-10-03T16:28:51.870395 #11078]  INFO -- : Started GET "/assets/bootstrap.min.js" for 190.181.36.140 at 2017-10-03 16:28:51 +0000
+I, [2017-10-03T16:28:52.039091 #11078]  INFO -- : Started GET "/assets/jquery.parallax.js" for 190.181.36.140 at 2017-10-03 16:28:52 +0000
+I, [2017-10-03T16:28:52.045894 #11078]  INFO -- : Started GET "/assets/application.js" for 190.181.36.140 at 2017-10-03 16:28:52 +0000
+I, [2017-10-03T16:28:52.704105 #11078]  INFO -- : Started GET "/assets/logos/logo-2.png" for 190.181.36.140 at 2017-10-03 16:28:52 +0000
+I, [2017-10-03T16:28:52.710590 #11078]  INFO -- : Started GET "/assets/logos/logo-fb-gris.png" for 190.181.36.140 at 2017-10-03 16:28:52 +0000
+I, [2017-10-03T16:28:57.640843 #11078]  INFO -- : Started POST "/login" for 190.181.36.140 at 2017-10-03 16:28:57 +0000
+I, [2017-10-03T16:28:57.641680 #11078]  INFO -- : Processing by SessionsController#create as HTML
+I, [2017-10-03T16:28:57.641740 #11078]  INFO -- :   Parameters: {"utf8"=>"✓", "authenticity_token"=>"03jIWIiZKuzJ9I22H0Eti31ALHNQg22lRbVGiLcnU95WJ0Mvt6dl/jNmB7ultu2yx+1qjR16fwmNPCOMlHi0uA==", "session"=>{"email"=>"admin@admin.com", "password"=>"[FILTERED]"}, "commit"=>"Iniciar sesion"}
+D, [2017-10-03T16:28:57.643505 #11078] DEBUG -- :   [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1[0m  [["email", "admin@admin.com"]]
+D, [2017-10-03T16:28:57.800872 #11078] DEBUG -- :   [1m[35m (0.1ms)[0m  begin transaction
+D, [2017-10-03T16:28:57.803129 #11078] DEBUG -- :   [1m[36mSQL (0.2ms)[0m  [1mUPDATE "users" SET "remember_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_digest", "$2a$10$sP0icl87kMwalZR6TDTEIuYXjWuYdtJx8fMFhGrxyxl5M/44Ktx6i"], ["updated_at", "2017-10-03 16:28:57.801171"], ["id", 1]]
+D, [2017-10-03T16:28:57.807416 #11078] DEBUG -- :   [1m[35m (4.0ms)[0m  commit transaction
+I, [2017-10-03T16:28:57.808212 #11078]  INFO -- : Redirected to http://ec2-35-165-168-209.us-west-2.compute.amazonaws.com/dashboard
+I, [2017-10-03T16:28:57.808360 #11078]  INFO -- : Completed 302 Found in 167ms (ActiveRecord: 4.8ms)
+I, [2017-10-03T16:28:58.007531 #11078]  INFO -- : Started GET "/dashboard" for 190.181.36.140 at 2017-10-03 16:28:58 +0000
+I, [2017-10-03T16:28:58.008932 #11078]  INFO -- : Processing by UsersController#main as HTML
+D, [2017-10-03T16:28:58.010120 #11078] DEBUG -- :   [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+I, [2017-10-03T16:28:58.012565 #11078]  INFO -- :   Rendered users/main.html.erb within layouts/application (0.8ms)
+I, [2017-10-03T16:28:58.016267 #11078]  INFO -- : Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.2ms)
+I, [2017-10-03T16:28:58.225475 #11078]  INFO -- : Started GET "/assets/application.css" for 190.181.36.140 at 2017-10-03 16:28:58 +0000
+I, [2017-10-03T16:28:58.232530 #11078]  INFO -- : Started GET "/assets/bootstrap.min.css" for 190.181.36.140 at 2017-10-03 16:28:58 +0000
+I, [2017-10-03T16:28:58.240111 #11078]  INFO -- : Started GET "/assets/animate.css" for 190.181.36.140 at 2017-10-03 16:28:58 +0000
+I, [2017-10-03T16:28:58.247714 #11078]  INFO -- : Started GET "/assets/responsive.css" for 190.181.36.140 at 2017-10-03 16:28:58 +0000
+I, [2017-10-03T16:28:58.254898 #11078]  INFO -- : Started GET "/assets/jquery.js" for 190.181.36.140 at 2017-10-03 16:28:58 +0000
+I, [2017-10-03T16:28:58.262812 #11078]  INFO -- : Started GET "/assets/bootstrap.min.js" for 190.181.36.140 at 2017-10-03 16:28:58 +0000
+I, [2017-10-03T16:28:58.414847 #11078]  INFO -- : Started GET "/assets/jquery.parallax.js" for 190.181.36.140 at 2017-10-03 16:28:58 +0000
+I, [2017-10-03T16:28:58.424431 #11078]  INFO -- : Started GET "/assets/application.js" for 190.181.36.140 at 2017-10-03 16:28:58 +0000
+I, [2017-10-03T16:28:58.641382 #11078]  INFO -- : Started GET "/assets/logos/logo-2.png" for 190.181.36.140 at 2017-10-03 16:28:58 +0000
+I, [2017-10-03T16:28:58.649131 #11078]  INFO -- : Started GET "/assets/logos/logo-fb-gris.png" for 190.181.36.140 at 2017-10-03 16:28:58 +0000
+I, [2017-10-03T16:29:00.337171 #11078]  INFO -- : Started GET "/covers" for 190.181.36.140 at 2017-10-03 16:29:00 +0000
+I, [2017-10-03T16:29:00.338792 #11078]  INFO -- : Processing by CoversController#index as HTML
+D, [2017-10-03T16:29:00.339576 #11078] DEBUG -- :   [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+D, [2017-10-03T16:29:00.342289 #11078] DEBUG -- :   [1m[36mCover Load (0.1ms)[0m  [1mSELECT "covers".* FROM "covers"[0m
+D, [2017-10-03T16:29:00.342876 #11078] DEBUG -- :   [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "covers"
+I, [2017-10-03T16:29:00.343186 #11078]  INFO -- :   Rendered covers/index.html.erb within layouts/application (1.8ms)
+I, [2017-10-03T16:29:00.361366 #11078]  INFO -- : Completed 200 OK in 22ms (Views: 21.2ms | ActiveRecord: 0.3ms)
+I, [2017-10-03T16:30:00.934097 #11078]  INFO -- : Started GET "/covers/new" for 190.181.36.140 at 2017-10-03 16:30:00 +0000
+I, [2017-10-03T16:30:00.935070 #11078]  INFO -- : Processing by CoversController#new as HTML
+D, [2017-10-03T16:30:00.935751 #11078] DEBUG -- :   [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+I, [2017-10-03T16:30:00.946082 #11078]  INFO -- :   Rendered covers/_form.html.erb (2.7ms)
+I, [2017-10-03T16:30:00.946226 #11078]  INFO -- :   Rendered covers/new.html.erb within layouts/application (4.2ms)
+I, [2017-10-03T16:30:00.950632 #11078]  INFO -- : Completed 200 OK in 15ms (Views: 9.9ms | ActiveRecord: 0.2ms)
+I, [2017-10-03T16:30:20.564301 #11078]  INFO -- : Started POST "/covers" for 190.181.36.140 at 2017-10-03 16:30:20 +0000
+I, [2017-10-03T16:30:20.565136 #11078]  INFO -- : Processing by CoversController#create as HTML
+I, [2017-10-03T16:30:20.565252 #11078]  INFO -- :   Parameters: {"utf8"=>"✓", "authenticity_token"=>"jP686x/BS4D9Zszti9yRPnPHUtNY+qgpyJMVKTiZsRcJoTecIP8Ekgf0RuAxK1EHyWoULRUDuoUAGnAtG8ZWcQ==", "cover"=>{"title"=>"Escuela de Negocios", "description"=>"Nelson Mandela", "image"=>#<ActionDispatch::Http::UploadedFile:0x007effd9a626f8 @tempfile=#<Tempfile:/tmp/RackMultipart20171003-11078-9pnt55.png>, @original_filename="wp1.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"cover[image]\"; filename=\"wp1.png\"\r\nContent-Type: image/png\r\n">}, "commit"=>"enviar"}
+D, [2017-10-03T16:30:20.566028 #11078] DEBUG -- :   [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+I, [2017-10-03T16:30:20.572906 #11078]  INFO -- : Command :: file -b --mime '/tmp/896ad8ff2a664823aa3d3c44653cea4520171003-11078-sxy503.png'
+I, [2017-10-03T16:30:20.577201 #11078]  INFO -- : Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/896ad8ff2a664823aa3d3c44653cea4520171003-11078-16jwwe0.png[0]' 2>/dev/null
+I, [2017-10-03T16:30:20.578295 #11078]  INFO -- : Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.1ms)
+F, [2017-10-03T16:30:20.579271 #11078] FATAL -- : 
+Paperclip::Errors::CommandNotFoundError (Could not run the `identify` command. Please install ImageMagick.):
+  app/controllers/covers_controller.rb:28:in `create'
+
+
+I, [2017-10-03T16:30:24.500664 #11078]  INFO -- : Started GET "/" for 190.181.36.140 at 2017-10-03 16:30:24 +0000
+I, [2017-10-03T16:30:24.501392 #11078]  INFO -- : Processing by MainController#index as HTML
+D, [2017-10-03T16:30:24.502263 #11078] DEBUG -- :   [1m[36mInfoText Load (0.1ms)[0m  [1mSELECT  "info_texts".* FROM "info_texts" WHERE "info_texts"."title" = ? LIMIT 1[0m  [["title", "Quienes somos"]]
+D, [2017-10-03T16:30:24.502473 #11078] DEBUG -- :   [1m[35mInfoText Load (0.0ms)[0m  SELECT  "info_texts".* FROM "info_texts" WHERE "info_texts"."title" = ? LIMIT 1  [["title", "Ofertas academicas"]]
+D, [2017-10-03T16:30:24.502703 #11078] DEBUG -- :   [1m[36mInfoText Load (0.0ms)[0m  [1mSELECT  "info_texts".* FROM "info_texts" WHERE "info_texts"."title" = ? LIMIT 1[0m  [["title", "Vive la experiencia"]]
+D, [2017-10-03T16:30:24.503384 #11078] DEBUG -- :   [1m[35mCover Load (0.1ms)[0m  SELECT  "covers".* FROM "covers" LIMIT 3
+D, [2017-10-03T16:30:24.503751 #11078] DEBUG -- :   [1m[36mComment Load (0.1ms)[0m  [1mSELECT  "comments".* FROM "comments" LIMIT 3[0m
+D, [2017-10-03T16:30:24.504058 #11078] DEBUG -- :   [1m[35mNotice Load (0.1ms)[0m  SELECT  "notices".* FROM "notices" LIMIT 3
+I, [2017-10-03T16:30:24.504199 #11078]  INFO -- :   Rendered main/index.html.erb within layouts/main (1.1ms)
+I, [2017-10-03T16:30:24.508711 #11078]  INFO -- : Completed 200 OK in 7ms (Views: 5.5ms | ActiveRecord: 0.5ms)
+I, [2017-10-03T16:30:24.719382 #11078]  INFO -- : Started GET "/assets/bootstrap.min.css" for 190.181.36.140 at 2017-10-03 16:30:24 +0000
+I, [2017-10-03T16:30:24.726642 #11078]  INFO -- : Started GET "/assets/animate.css" for 190.181.36.140 at 2017-10-03 16:30:24 +0000
+I, [2017-10-03T16:30:24.734477 #11078]  INFO -- : Started GET "/assets/main.css" for 190.181.36.140 at 2017-10-03 16:30:24 +0000
+I, [2017-10-03T16:30:24.742056 #11078]  INFO -- : Started GET "/assets/responsive.css" for 190.181.36.140 at 2017-10-03 16:30:24 +0000
+I, [2017-10-03T16:30:24.749195 #11078]  INFO -- : Started GET "/assets/jquery.js" for 190.181.36.140 at 2017-10-03 16:30:24 +0000
+I, [2017-10-03T16:30:24.756650 #11078]  INFO -- : Started GET "/assets/bootstrap.min.js" for 190.181.36.140 at 2017-10-03 16:30:24 +0000
+I, [2017-10-03T16:30:24.909588 #11078]  INFO -- : Started GET "/assets/jquery.parallax.js" for 190.181.36.140 at 2017-10-03 16:30:24 +0000
+I, [2017-10-03T16:30:24.916987 #11078]  INFO -- : Started GET "/assets/application.js" for 190.181.36.140 at 2017-10-03 16:30:24 +0000
+I, [2017-10-03T16:30:25.105816 #11078]  INFO -- : Started GET "/assets/logos/logo.png" for 190.181.36.140 at 2017-10-03 16:30:25 +0000
+I, [2017-10-03T16:30:25.136087 #11078]  INFO -- : Started GET "/assets/logos/logo-braidot.png" for 190.181.36.140 at 2017-10-03 16:30:25 +0000
+I, [2017-10-03T16:30:25.143607 #11078]  INFO -- : Started GET "/assets/logos/cmi-logo.png" for 190.181.36.140 at 2017-10-03 16:30:25 +0000
+I, [2017-10-03T16:30:25.154777 #11078]  INFO -- : Started GET "/assets/slider/home-pattern.png" for 190.181.36.140 at 2017-10-03 16:30:25 +0000
+I, [2017-10-03T16:30:25.161829 #11078]  INFO -- : Started GET "/assets/about-us/background-blue.jpg" for 190.181.36.140 at 2017-10-03 16:30:25 +0000
+I, [2017-10-03T16:30:25.169747 #11078]  INFO -- : Started GET "/assets/our-team/imagen-cursos-1.jpg" for 190.181.36.140 at 2017-10-03 16:30:25 +0000
+I, [2017-10-03T16:30:25.293227 #11078]  INFO -- : Started GET "/assets/our-team/unm-oferta-academica-2.png" for 190.181.36.140 at 2017-10-03 16:30:25 +0000
+I, [2017-10-03T16:30:25.326469 #11078]  INFO -- : Started GET "/assets/our-team/imagen-cursos-3.jpg" for 190.181.36.140 at 2017-10-03 16:30:25 +0000
+I, [2017-10-03T16:30:25.335346 #11078]  INFO -- : Started GET "/assets/our-team/unm-oferta-academica-1.png" for 190.181.36.140 at 2017-10-03 16:30:25 +0000
+I, [2017-10-03T16:30:25.344680 #11078]  INFO -- : Started GET "/assets/our-team/imagen-cursos-4.jpg" for 190.181.36.140 at 2017-10-03 16:30:25 +0000
+I, [2017-10-03T16:30:25.352600 #11078]  INFO -- : Started GET "/assets/our-team/imagen-cursos-2.jpg" for 190.181.36.140 at 2017-10-03 16:30:25 +0000
+I, [2017-10-03T16:30:25.361124 #11078]  INFO -- : Started GET "/assets/clients/img-web-unm-2.jpg" for 190.181.36.140 at 2017-10-03 16:30:25 +0000
+I, [2017-10-03T16:30:25.483473 #11078]  INFO -- : Started GET "/assets/clients/background-black.jpg" for 190.181.36.140 at 2017-10-03 16:30:25 +0000
+I, [2017-10-03T16:30:25.519029 #11078]  INFO -- : Started GET "/assets/logos/logo-2.png" for 190.181.36.140 at 2017-10-03 16:30:25 +0000
+I, [2017-10-03T16:30:25.527689 #11078]  INFO -- : Started GET "/assets/logos/logo-fb-gris.png" for 190.181.36.140 at 2017-10-03 16:30:25 +0000
