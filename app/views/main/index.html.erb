@@ -1,3 +1,10 @@
+<style>
+       #map {
+        height: 400px;
+        width: 100%;
+       }
+    </style>
+
 <header id="navigation" >
 	<div class="navbar navbar-inverse navbar-fixed-top" role="banner">
 		<div class="container">
@@ -56,13 +63,40 @@
 
 </section><!--/#home-->
 
+<section>
+	<center><h1>Cursos Destacados</h1></center>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8">
+				<div class="slide">
+
+					<% @courses.each do |course| %>
+							
+						<div class="slider-item">
+					
+							<h1><%= course.name %></h1>
+							<p class="lead">
+								<%= course.decription %>
+							</p>
+							<p>
+								<a href="/courses" style="color: black;">Ver más</a>
+							</p>
+						</div>
+					<% end %>
+							
+				</div>		
+			</div>
+		</div>
+	</div>
+</section>
+
 <section id="about-us">
   <div class="container">
   	<div class="text-center">
   		<div class="col-sm-8 col-sm-offset-2">
   			<h2 class="title-one">¿Quienes somos?</h2>
 				<% if @whoWeAre != nil %>
-  				<p><%= @whoWeAre.content %></p>
+  				<p style="font-size: 150%;"><%= @whoWeAre.content %></p>
 				<% end %>
   		</div>
   	</div>
@@ -135,10 +169,10 @@
 					<% end %>
           <div class="logo-container">
             <div class="experience-alliance-logo">
-              <img src="assets/logos/logo-braidot.png" width="100%"/>
+              <img src="assets/logos/salamanca2.png" width="150%" style="margin-left: -70px;" />
             </div>
             <div class="experience-alliance-logo">
-              <img src="assets/logos/cmi-logo.png" width="100%"/>
+              <img src="assets/logos/logo-braidot.png" width="100%"/>
             </div>
           </div>
         </div>
@@ -155,10 +189,10 @@
 				<% @comments.each do |comment| %>
 	        <li class="col-xs-12 col-sm-4">
 						<% if @comments[0] == comment %>
-							<img src="/assets/person1.png" class="student-small-icon student active">
+							<img src="<%= comment.photo.url %>" class="student-small-icon student active">
 				
 						<% else %>
-							<img src="/assets/person1.png" class="student-small-icon student">
+							<img src="<%= comment.photo.url %>" class="student-small-icon student">
 							
 						<% end %>
 						<h3><%= comment.name %></h3>
@@ -174,22 +208,141 @@
 			<% else %>
 				<div class="student-text active">
 			<% end %>
-      	<p><%= comment.content %></p>
+      	<p style="font-size: 150%;">"<%= comment.content %>"</p>
     	</div>
 		<% end %>
   </div>
 
 </section> <!--/#portfolio-->
 
+<section id="facebook">
+	<div class="container">
+	    <div class="row text-center" style="margin-bottom: 50px;">
+	      <h2 class="title-one">Personas que vivieron la experiencia UNM</h2>
+	      <br><br>
+
+	      <div class="slide2">	      			
+	      		<div class="slider-item">
+	      			<div class="col-lg-3">
+	      				<iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Festefania.flores.10%2Fposts%2F10212627381015967%3A0&width=500" width="500" height="354" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+	      			</div>
+	      			<div class="col-lg-3"></div>
+	      			<div class="col-lg-3">
+	      				 <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fmauricio.romerosalamanca%2Fposts%2F10155411545254359%3A0&width=500" width="500" height="354" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+	      			</div>
+	      		</div>
+
+	      		<div class="slider-item">
+	      			<div class="col-lg-3">
+	      				<iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Ffernando.montesdeoca.54966%2Fposts%2F10212249979636965%3A0&width=500" width="500" height="335" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+	      			</div>
+	      			<div class="col-lg-3"></div>
+	      			<div class="col-lg-3">
+	      				 <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Frodrigo.herbastorrico%2Fposts%2F1409529732476160%3A0&width=500" width="500" height="335" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+	      			</div>
+	      		</div>
+	      		<div class="slider-item">
+	      			<div class="col-lg-3">
+	      				<iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FJesusGabrielSotoSoria%2Fposts%2F10155739588369047%3A0&width=500" width="500" height="335" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+	      			</div>
+	      			<div class="col-lg-3"></div>
+	      			<div class="col-lg-3">
+	      				 <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fkevinalexander.lopezignacio%2Fposts%2F1379343978768428%3A0&width=500" width="500" height="354" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+	      			</div>
+	      		</div>
+	      		<div class="slider-item">
+	      			<div class="col-lg-3">
+	      				<iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fmramirezingala%2Fposts%2F1480598885349912%3A0&width=500" width="500" height="354" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+	      			</div>
+	      			<div class="col-lg-3"></div>
+	      			<div class="col-lg-3">
+	      				 <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fgabriela.cocaherrera%2Fposts%2F1238844242836079%3A0&width=500" width="500" height="430" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+	      			</div>
+	      		</div>
+	      		<div class="slider-item">
+	      			<div class="col-lg-3">
+	      				<iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3D10208956405447711%26id%3D1243383029%26substory_index%3D0&width=500" width="500" height="335" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+	      			</div>
+	      			<div class="col-lg-3"></div>
+	      			<div class="col-lg-3">
+	      				 <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fjennifer.merino.31%2Fposts%2F1085188311613656%3A0&width=500" width="500" height="335" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+	      			</div>
+	      		</div>
+	      		<div class="slider-item">
+	      			<div class="col-lg-3">
+	      				<iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fclaudia.murilloantequera%2Fposts%2F10209916520163330%3A0&width=500" width="500" height="373" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+	      			</div>
+	      			<div class="col-lg-3"></div>
+	      			<div class="col-lg-3">
+	      				 <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fmarcelobascope%2Fposts%2F1053990667953585%3A0&width=500" width="500" height="335" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+	      			</div>
+	      		</div>
+	      </div>	
+
+	     </div>
+	 </div>
+</section>
+
 <section id="notices">
   <div class="container" style="width: 100%;">
     <h3>Noticias sobre formacion</h3>
-		<% @notices.each do |notice| %>
-	    <div class="noti col-sm-3" style="background-image: url(<%= notice.image.url %>);">
+		<% @notices.each_with_index do |notice, index| %>
+
+		<% if index == 0 %>
+			<div class="noti col-sm-3" style="background-image: url(/assets/noticia.jpg);">	
+		<% end %>
+
+		<% if index == 1 %>
+			<div class="noti col-sm-3" style="background-image: url(/assets/noticia2.jpg);">	
+		<% end %>
+
+		<% if index == 2 %>
+			<div class="noti col-sm-3" style="background-image: url(/assets/noticia3.jpg);">	
+		<% end %>
+	    
 
 	      <h4><a href="<%= notice.link %>" target="_blank"><%= notice.title %></a></h4>
 	    </div>
 		<% end %>
+	<h3>Noticias sobre Neurociencia</h3>
+		<div class="noti col-sm-3" style="background-image: url(/assets/neuro1.jpg);">	
+			<h4><a href="https://elpais.com/elpais/2017/10/19/ciencia/1508422567_265547.html" target="_blank">Las personas que duermen mejor sufren menos dolor de cuello</a></h4>
+	    </div>
+
+	    <div class="noti col-sm-3" style="background-image: url(/assets/neuro2.jpg);">	
+			<h4><a href="https://elpais.com/elpais/2017/10/16/ciencia/1508155274_678622.html" target="_blank">Así decide tu cerebro qué recuerdos guarda o elimina mientras duermes</a></h4>
+	    </div>
+
+	    <div class="noti col-sm-3" style="background-image: url(/assets/neuro3.jpg);">	
+			<h4><a href="https://elpais.com/elpais/2017/10/08/laboratorio_de_felicidad/1507453721_075577.html" target="_blank">Cómo mantener la templanza en tiempos agitados</a></h4>
+	    </div>
+
+	<h3>Noticias sobre Tecnología</h3>
+		<div class="noti col-sm-3" style="background-image: url(/assets/tecno1.jpg);">	
+			<h4><a href="http://www.bbc.com/mundo/noticias-41748956" target="_blank">8 pasos para limpiar en profundidad tu actividad en internet</a></h4>
+	    </div>
+
+	    <div class="noti col-sm-3" style="background-image: url(/assets/tecno2.jpg);">	
+			<h4><a href="http://www.bbc.com/mundo/noticias-41737841" target="_blank">Cuáles son los problemas de "pantalla quemada" de los Pixel 2, los nuevos teléfonos móviles de Google</a></h4>
+	    </div>
+
+	    <div class="noti col-sm-3" style="background-image: url(/assets/tecno3.jpg);">	
+			<h4><a href="http://www.bbc.com/mundo/noticias-41721477" target="_blank">Las peculiares estrategias con que 3 ciudades buscan atraer el Amazon HQ2, </a></h4>
+	    </div>
+
+
+	<h3>Videos</h3><br>
+	<div class="row">
+		<div class="col-lg-1"></div>
+		<div class="col-lg-3">
+			<iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FUNMNelsonMandela%2Fvideos%2F2037977993087754%2F&show_text=1&width=560" width="560" height="426" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
+		</div>
+		<div class="col-lg-3"></div>
+		<div class="col-lg-3">
+			<iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FUNMNelsonMandela%2Fvideos%2F2036405356578351%2F&show_text=1&width=560" width="560" height="426" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
+		</div>
+	</div>
+		
   </div>
 </section>
 
@@ -206,6 +359,25 @@
   <div class="container">
 	  <div class="contact-details">
 		  <div class="row text-center clearfix">
+		  	
+		  	    <div id="map"></div>
+		  	    <br>
+		  	    <script>
+		  	      function initMap() {
+		  	        var uluru = {lat: -17.3766659, lng: -66.1476187};
+		  	        var map = new google.maps.Map(document.getElementById('map'), {
+		  	          zoom: 17,
+		  	          center: uluru
+		  	        });
+		  	        var marker = new google.maps.Marker({
+		  	          position: uluru,
+		  	          map: map
+		  	        });
+		  	      }
+		  	    </script>
+		  	    <script async defer
+		  	    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA9RJjGxhsfI_-0MvkFmikFwl4YzSDZZzE&callback=initMap">
+		  	    </script>
   			<div class="col-sm-6">
   				<div class="contact-address">
             <div class="social-icons">
@@ -245,3 +417,19 @@
 		</div>
 	</div>
 </footer> <!--/#footer-->
+
+<script type="text/javascript">
+	$('.slide').textSlider({
+		timeout: 4000,
+		slideTime: 750,
+		loop: 100
+	});
+
+	$('.slide2').textSlider({
+		timeout: 4000,
+		slideTime: 750,
+		loop: 100
+	});
+
+
+</script>

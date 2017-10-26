@@ -1,21 +1,5 @@
 class CoursesController < ApplicationController
   before_action :set_course, only: [:show, :edit, :update, :destroy]
-  before_action :check_credentials, except: [:list_courses]
-
-  def list_courses
-    case params[:type_id]
-    when "1"
-      @title = "Desarrollo personal"
-    when "2"
-      @title = "Desarrollo empresarial"
-    when "3"
-      @title = "Servicio al cliente"
-    when "4"
-      @title = "Desarrollo profesional"
-    end
-    @courses = Course.where(type: @title)
-
-  end
 
   # GET /courses
   # GET /courses.json
@@ -41,6 +25,7 @@ class CoursesController < ApplicationController
   # POST /courses.json
   def create
     @course = Course.new(course_params)
+    @course_types = [['Desarrollo personal','Desarrollo personal'],['Desarrollo empresarial','Desarrollo empresarial'],['Servicio al cliente','Servicio al cliente'],['Desarrollo profesional','Desarrollo profesional']]
 
     respond_to do |format|
       if @course.save
@@ -85,6 +70,6 @@ class CoursesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def course_params
-      params.require(:course).permit(:name, :content, :type)
+      params.require(:course).permit(:name, :decription, :course_type)
     end
 end

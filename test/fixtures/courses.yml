@@ -2,10 +2,10 @@
 
 one:
   name: MyString
-  content: MyText
-  type: 
+  decription: MyText
+  course_type: MyString
 
 two:
   name: MyString
-  content: MyText
-  type: 
+  decription: MyText
+  course_type: MyString

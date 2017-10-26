@@ -1,10 +1,10 @@
-<%= form_for(course, local: true) do |form| %>
-  <% if course.errors.any? %>
+<%= form_for(@course) do |f| %>
+  <% if @course.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(course.errors.count, "error") %> prohibited this course from being saved:</h2>
+      <h2><%= pluralize(@course.errors.count, "error") %> prohibited this course from being saved:</h2>
 
       <ul>
-      <% course.errors.full_messages.each do |message| %>
+      <% @course.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
@@ -12,22 +12,18 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :nombre %>
-    <%= form.text_field :name, id: :course_name %>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
   </div>
-
   <div class="field">
-    <%= form.label :contenido %>
-    <%= form.text_area :content, id: :course_content %>
+    <%= f.label :decription %><br>
+    <%= f.text_area :decription %>
   </div>
-
   <div class="field">
-    <%= form.label :tipo %>
-    <%= form.select :type, options_for_select([ "Desarrollo personal", "Desarrollo empresarial", "Servicio al cliente",
-      "Desarrollo profesional" ], "Desarrollo personal"), id: :course_type %>
+    <%= f.label :course_type %><br>
+    <%= f.select(:course_type, options_for_select([['Desarrollo personal','Desarrollo personal'],['Desarrollo empresarial','Desarrollo empresarial'],['Servicio al cliente','Servicio al cliente'],['Desarrollo profesional','Desarrollo profesional']]))%>
   </div>
-
   <div class="actions">
-    <%= form.submit :enviar %>
+    <%= f.submit %>
   </div>
 <% end %>
