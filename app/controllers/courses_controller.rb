@@ -52,6 +52,29 @@ class CoursesController < ApplicationController
     end
   end
 
+  def list_courses
+    course_type = params[:id].to_s
+    puts "======================================="
+    puts course_type
+    if course_type == "2"
+      @courses = Course.where(course_type: "Desarrollo empresarial")
+      @title = "Desarrolo empresarial"
+    end
+    if course_type == "1"
+      @courses = Course.where(course_type: "Desarrollo personal") 
+      @title = "Desarrolo personal"
+    end
+    if course_type == "3"
+      @courses = Course.where(course_type: "Servicio al cliente") 
+      @title = "Servicio al cliente"
+    end
+    if course_type == "4"
+      @courses = Course.where(course_type: "Desarrolo profesional") 
+      @title = "Desarrolo profesional"
+    end
+    
+  end
+
   # DELETE /courses/1
   # DELETE /courses/1.json
   def destroy
