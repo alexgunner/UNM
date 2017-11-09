@@ -248,40 +248,6 @@
   </div>
 </section> <!--/#blog-->
 
-<section id="student-comments">
-  <div class="container">
-    <div class="row text-center" style="margin-bottom: 50px;">
-      <h2 class="title-one">Personas que vivieron la experiencia UNM</h2>
-      <ul class="students">
-				<% @comments.each do |comment| %>
-	        <li class="col-xs-12 col-sm-4">
-						<% if @comments[0] == comment %>
-							<img src="<%= comment.photo.url %>" class="student-small-icon student active">
-				
-						<% else %>
-							<img src="<%= comment.photo.url %>" class="student-small-icon student">
-							
-						<% end %>
-						<h3><%= comment.name %></h3>
-	        </li>
-				<% end %>
-      </ul>
-    </div>
-  </div>
-  <div class="student-comment">
-		<% @comments.each do |comment| %>
-			<% if @comments[0] == comment %>
-    		<div class="student-text active">
-			<% else %>
-				<div class="student-text active">
-			<% end %>
-      	<p style="font-size: 150%;">"<%= comment.content %>"</p>
-    	</div>
-		<% end %>
-  </div>
-
-</section> <!--/#portfolio-->
-
 <section id="facebook">
 	<div class="container">
 	    <div class="row text-center" style="margin-bottom: 50px;">
