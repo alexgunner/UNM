@@ -1,1 +1,76 @@
  
+
+
+Started GET "/" for 181.114.124.108 at 2017-11-09 11:50:12 -0500
+Cannot render console from 181.114.124.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MainController#index as HTML
+DEPRECATION WARNING: Currently, Active Record suppresses errors raised within `after_rollback`/`after_commit` callbacks and only print them to the logs. In the next version, these errors will no longer be suppressed. Instead, the errors will propagate normally just like in other Active Record callbacks.
+
+You can opt into the new behavior and remove this warning by setting:
+
+  config.active_record.raise_in_transactional_callbacks = true
+
+ (called from <class:Comment> at /home/rails/UNM/app/models/comment.rb:2)
+DEPRECATION WARNING: Currently, Active Record suppresses errors raised within `after_rollback`/`after_commit` callbacks and only print them to the logs. In the next version, these errors will no longer be suppressed. Instead, the errors will propagate normally just like in other Active Record callbacks.
+
+You can opt into the new behavior and remove this warning by setting:
+
+  config.active_record.raise_in_transactional_callbacks = true
+
+ (called from <class:Cover> at /home/rails/UNM/app/models/cover.rb:2)
+DEPRECATION WARNING: Currently, Active Record suppresses errors raised within `after_rollback`/`after_commit` callbacks and only print them to the logs. In the next version, these errors will no longer be suppressed. Instead, the errors will propagate normally just like in other Active Record callbacks.
+
+You can opt into the new behavior and remove this warning by setting:
+
+  config.active_record.raise_in_transactional_callbacks = true
+
+ (called from <class:Notice> at /home/rails/UNM/app/models/notice.rb:2)
+  [1m[35mInfoText Load (0.5ms)[0m  SELECT  "info_texts".* FROM "info_texts" WHERE "info_texts"."title" = ? LIMIT 1  [["title", "Quienes somos"]]
+  [1m[36mInfoText Load (0.3ms)[0m  [1mSELECT  "info_texts".* FROM "info_texts" WHERE "info_texts"."title" = ? LIMIT 1[0m  [["title", "Ofertas academicas"]]
+  [1m[35mInfoText Load (0.1ms)[0m  SELECT  "info_texts".* FROM "info_texts" WHERE "info_texts"."title" = ? LIMIT 1  [["title", "Vive la experiencia"]]
+  [1m[36mCover Load (0.3ms)[0m  [1mSELECT  "covers".* FROM "covers" LIMIT 3[0m
+  [1m[35mCourse Load (0.4ms)[0m  SELECT "courses".* FROM "courses"
+  [1m[36mComment Load (0.4ms)[0m  [1mSELECT  "comments".* FROM "comments" LIMIT 3[0m
+  [1m[35mNotice Load (0.2ms)[0m  SELECT  "notices".* FROM "notices" LIMIT 3
+  Rendered main/index.html.erb within layouts/main (45.7ms)
+Completed 500 Internal Server Error in 117ms (ActiveRecord: 4.2ms)
+
+SyntaxError (/home/rails/UNM/app/views/layouts/main.html.erb:6: syntax error, unexpected ':', expecting =>
+...'all', 'data-turbolinks-track': 'reload' );@output_buffer.sa...
+...                               ^
+/home/rails/UNM/app/views/layouts/main.html.erb:7: syntax error, unexpected ':', expecting =>
+...'all', 'data-turbolinks-track': 'reload' );@output_buffer.sa...
+...                               ^
+/home/rails/UNM/app/views/layouts/main.html.erb:8: syntax error, unexpected ':', expecting =>
+...'all', 'data-turbolinks-track': 'reload' );@output_buffer.sa...
+...                               ^
+/home/rails/UNM/app/views/layouts/main.html.erb:9: syntax error, unexpected ':', expecting =>
+...'all', 'data-turbolinks-track': 'reload' );@output_buffer.sa...
+...                               ^
+/home/rails/UNM/app/views/layouts/main.html.erb:12: syntax error, unexpected ':', expecting ')'
+...uery', 'data-turbolinks-track': 'reload' );@output_buffer.sa...
+...                               ^
+/home/rails/UNM/app/views/layouts/main.html.erb:13: syntax error, unexpected ':', expecting ')'
+....min', 'data-turbolinks-track': 'reload' );@output_buffer.sa...
+...                               ^
+/home/rails/UNM/app/views/layouts/main.html.erb:14: syntax error, unexpected ':', expecting ')'
+...llax', 'data-turbolinks-track': 'reload' );@output_buffer.sa...
+...                               ^
+/home/rails/UNM/app/views/layouts/main.html.erb:15: syntax error, unexpected ':', expecting ')'
+...tion', 'data-turbolinks-track': 'reload' );@output_buffer.sa...
+...                               ^):
+  app/views/layouts/main.html.erb:6: syntax error, unexpected ':', expecting =>
+  app/views/layouts/main.html.erb:7: syntax error, unexpected ':', expecting =>
+  app/views/layouts/main.html.erb:8: syntax error, unexpected ':', expecting =>
+  app/views/layouts/main.html.erb:9: syntax error, unexpected ':', expecting =>
+  app/views/layouts/main.html.erb:12: syntax error, unexpected ':', expecting ')'
+  app/views/layouts/main.html.erb:13: syntax error, unexpected ':', expecting ')'
+  app/views/layouts/main.html.erb:14: syntax error, unexpected ':', expecting ')'
+  app/views/layouts/main.html.erb:15: syntax error, unexpected ':', expecting ')'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (29.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (62.7ms)
