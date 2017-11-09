@@ -3,30 +3,18 @@
     <div class="row text-center" style="margin-bottom: 50px;">
       <h2 class="title-one"><%= @title %></h2>
 
+      <br><a href="/">Volver</a>
 
       <ul class="circle-course-list">
-          
+        <% if not @courses.nil? %>
+          <% @courses.each do |course| %>
               <li class="col-sm-12 col-lg-4">
                 <div class="course-icon">
-                  <h3><a href="#">Curso de prueba</a></h3>
+                  <h3><%= course.name %></h3>
                 </div>
               </li>
-              <li class="col-sm-12 col-lg-4">
-                <div class="course-icon">
-                  <h3><a href="#">Curso de prueba</a></h3>
-                </div>
-              </li>
-              <li class="col-sm-12 col-lg-4">
-                <div class="course-icon">
-                  <h3><a href="#">Curso de prueba</a></h3>
-                </div>
-              </li>
-              <li class="col-sm-12 col-lg-4">
-                <div class="course-icon">
-                  <h3><a href="#">Curso de prueba</a></h3>
-                </div>
-              </li>
-          
+          <% end %>
+        <% end %>
       </ul>
 
 

@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   resources :comments
   resources :users
 
-  get '/list_courses/:type_id', to: 'courses#list_courses'
+  get '/list_courses/:id', to: 'courses#list_courses'
   get '/dashboard', to: 'users#main'
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'
