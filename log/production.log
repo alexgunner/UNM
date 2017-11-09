@@ -4716,3 +4716,87 @@ SyntaxError (/home/rails/UNM/app/views/layouts/main.html.erb:6: syntax error, un
   app/views/layouts/main.html.erb:15: syntax error, unexpected ':', expecting ')'
 
 
+I, [2017-11-09T11:53:49.423174 #18081]  INFO -- : Started GET "/" for 181.114.124.108 at 2017-11-09 11:53:49 -0500
+I, [2017-11-09T11:53:49.444945 #18081]  INFO -- : Processing by MainController#index as HTML
+D, [2017-11-09T11:53:49.475241 #18081] DEBUG -- :   [1m[36mInfoText Load (0.3ms)[0m  [1mSELECT  "info_texts".* FROM "info_texts" WHERE "info_texts"."title" = ? LIMIT 1[0m  [["title", "Quienes somos"]]
+D, [2017-11-09T11:53:49.475775 #18081] DEBUG -- :   [1m[35mInfoText Load (0.1ms)[0m  SELECT  "info_texts".* FROM "info_texts" WHERE "info_texts"."title" = ? LIMIT 1  [["title", "Ofertas academicas"]]
+D, [2017-11-09T11:53:49.476218 #18081] DEBUG -- :   [1m[36mInfoText Load (0.1ms)[0m  [1mSELECT  "info_texts".* FROM "info_texts" WHERE "info_texts"."title" = ? LIMIT 1[0m  [["title", "Vive la experiencia"]]
+D, [2017-11-09T11:53:49.484855 #18081] DEBUG -- :   [1m[35mCover Load (0.3ms)[0m  SELECT  "covers".* FROM "covers" LIMIT 3
+D, [2017-11-09T11:53:49.486245 #18081] DEBUG -- :   [1m[36mCourse Load (0.1ms)[0m  [1mSELECT "courses".* FROM "courses"[0m
+D, [2017-11-09T11:53:49.487212 #18081] DEBUG -- :   [1m[35mComment Load (0.2ms)[0m  SELECT  "comments".* FROM "comments" LIMIT 3
+D, [2017-11-09T11:53:49.488452 #18081] DEBUG -- :   [1m[36mNotice Load (0.2ms)[0m  [1mSELECT  "notices".* FROM "notices" LIMIT 3[0m
+I, [2017-11-09T11:53:49.489357 #18081]  INFO -- :   Rendered main/index.html.erb within layouts/main (8.6ms)
+I, [2017-11-09T11:53:50.044472 #18081]  INFO -- : Completed 200 OK in 599ms (Views: 565.6ms | ActiveRecord: 2.8ms)
+I, [2017-11-09T11:53:50.350754 #18081]  INFO -- : Started GET "/assets/bootstrap.min.css" for 181.114.124.108 at 2017-11-09 11:53:50 -0500
+I, [2017-11-09T11:53:50.374910 #18081]  INFO -- : Started GET "/assets/animate.css" for 181.114.124.108 at 2017-11-09 11:53:50 -0500
+I, [2017-11-09T11:53:50.382799 #18081]  INFO -- : Started GET "/assets/main.css" for 181.114.124.108 at 2017-11-09 11:53:50 -0500
+I, [2017-11-09T11:53:50.392944 #18081]  INFO -- : Started GET "/assets/responsive.css" for 181.114.124.108 at 2017-11-09 11:53:50 -0500
+I, [2017-11-09T11:53:50.402102 #18081]  INFO -- : Started GET "/assets/jquery.js" for 181.114.124.108 at 2017-11-09 11:53:50 -0500
+I, [2017-11-09T11:53:50.418158 #18081]  INFO -- : Started GET "/assets/bootstrap.min.js" for 181.114.124.108 at 2017-11-09 11:53:50 -0500
+I, [2017-11-09T11:53:50.558652 #18081]  INFO -- : Started GET "/assets/jquery.parallax.js" for 181.114.124.108 at 2017-11-09 11:53:50 -0500
+I, [2017-11-09T11:53:50.807319 #18081]  INFO -- : Started GET "/assets/application.js" for 181.114.124.108 at 2017-11-09 11:53:50 -0500
+I, [2017-11-09T11:53:51.121756 #18081]  INFO -- : Started GET "/assets/logos/logo.png" for 181.114.124.108 at 2017-11-09 11:53:51 -0500
+I, [2017-11-09T11:53:51.369056 #18081]  INFO -- : Started GET "/assets/logos/salamanca2.png" for 181.114.124.108 at 2017-11-09 11:53:51 -0500
+I, [2017-11-09T11:53:51.521424 #18081]  INFO -- : Started GET "/assets/logos/logo-braidot.png" for 181.114.124.108 at 2017-11-09 11:53:51 -0500
+I, [2017-11-09T11:53:51.596719 #18081]  INFO -- : Started GET "/assets/slider/home-pattern.png" for 181.114.124.108 at 2017-11-09 11:53:51 -0500
+I, [2017-11-09T11:53:51.613017 #18092]  INFO -- : Started GET "/assets/about-us/background-blue.jpg" for 181.114.124.108 at 2017-11-09 11:53:51 -0500
+I, [2017-11-09T11:53:51.617705 #18081]  INFO -- : Started GET "/assets/our-team/imagen-cursos-1.jpg" for 181.114.124.108 at 2017-11-09 11:53:51 -0500
+I, [2017-11-09T11:53:51.633988 #18081]  INFO -- : Started GET "/assets/our-team/unm-oferta-academica-2.png" for 181.114.124.108 at 2017-11-09 11:53:51 -0500
+I, [2017-11-09T11:53:51.653066 #18081]  INFO -- : Started GET "/assets/our-team/imagen-cursos-2.jpg" for 181.114.124.108 at 2017-11-09 11:53:51 -0500
+I, [2017-11-09T11:53:51.685925 #18081]  INFO -- : Started GET "/assets/our-team/unm-oferta-academica-1.png" for 181.114.124.108 at 2017-11-09 11:53:51 -0500
+I, [2017-11-09T11:53:51.786391 #18081]  INFO -- : Started GET "/assets/our-team/imagen-cursos-3.jpg" for 181.114.124.108 at 2017-11-09 11:53:51 -0500
+I, [2017-11-09T11:53:51.795004 #18081]  INFO -- : Started GET "/assets/our-team/imagen-cursos-4.jpg" for 181.114.124.108 at 2017-11-09 11:53:51 -0500
+I, [2017-11-09T11:53:51.811506 #18081]  INFO -- : Started GET "/assets/clients/img-web-unm-2.jpg" for 181.114.124.108 at 2017-11-09 11:53:51 -0500
+I, [2017-11-09T11:53:51.818781 #18081]  INFO -- : Started GET "/assets/clients/background-black-copy.png" for 181.114.124.108 at 2017-11-09 11:53:51 -0500
+I, [2017-11-09T11:53:51.850554 #18081]  INFO -- : Started GET "/assets/neuro1.jpg" for 181.114.124.108 at 2017-11-09 11:53:51 -0500
+I, [2017-11-09T11:53:51.952332 #18081]  INFO -- : Started GET "/assets/neuro2.jpg" for 181.114.124.108 at 2017-11-09 11:53:51 -0500
+I, [2017-11-09T11:53:51.965416 #18081]  INFO -- : Started GET "/assets/neuro3.jpg" for 181.114.124.108 at 2017-11-09 11:53:51 -0500
+I, [2017-11-09T11:53:52.001487 #18081]  INFO -- : Started GET "/assets/tecno1.jpg" for 181.114.124.108 at 2017-11-09 11:53:52 -0500
+I, [2017-11-09T11:53:52.018972 #18081]  INFO -- : Started GET "/assets/tecno3.jpg" for 181.114.124.108 at 2017-11-09 11:53:52 -0500
+I, [2017-11-09T11:53:52.023345 #18100]  INFO -- : Started GET "/assets/tecno2.jpg" for 181.114.124.108 at 2017-11-09 11:53:52 -0500
+I, [2017-11-09T11:53:52.118980 #18081]  INFO -- : Started GET "/assets/logos/logo-2.png" for 181.114.124.108 at 2017-11-09 11:53:52 -0500
+I, [2017-11-09T11:53:52.135393 #18081]  INFO -- : Started GET "/assets/logos/logo-fb-gris.png" for 181.114.124.108 at 2017-11-09 11:53:52 -0500
+I, [2017-11-09T11:54:08.854238 #18081]  INFO -- : Started GET "/" for 181.114.124.108 at 2017-11-09 11:54:08 -0500
+I, [2017-11-09T11:54:08.855835 #18081]  INFO -- : Processing by MainController#index as HTML
+D, [2017-11-09T11:54:08.857229 #18081] DEBUG -- :   [1m[35mInfoText Load (0.2ms)[0m  SELECT  "info_texts".* FROM "info_texts" WHERE "info_texts"."title" = ? LIMIT 1  [["title", "Quienes somos"]]
+D, [2017-11-09T11:54:08.857628 #18081] DEBUG -- :   [1m[36mInfoText Load (0.1ms)[0m  [1mSELECT  "info_texts".* FROM "info_texts" WHERE "info_texts"."title" = ? LIMIT 1[0m  [["title", "Ofertas academicas"]]
+D, [2017-11-09T11:54:08.858111 #18081] DEBUG -- :   [1m[35mInfoText Load (0.1ms)[0m  SELECT  "info_texts".* FROM "info_texts" WHERE "info_texts"."title" = ? LIMIT 1  [["title", "Vive la experiencia"]]
+D, [2017-11-09T11:54:08.859673 #18081] DEBUG -- :   [1m[36mCover Load (0.3ms)[0m  [1mSELECT  "covers".* FROM "covers" LIMIT 3[0m
+D, [2017-11-09T11:54:08.860379 #18081] DEBUG -- :   [1m[35mCourse Load (0.2ms)[0m  SELECT "courses".* FROM "courses"
+D, [2017-11-09T11:54:08.861128 #18081] DEBUG -- :   [1m[36mComment Load (0.2ms)[0m  [1mSELECT  "comments".* FROM "comments" LIMIT 3[0m
+D, [2017-11-09T11:54:08.861783 #18081] DEBUG -- :   [1m[35mNotice Load (0.2ms)[0m  SELECT  "notices".* FROM "notices" LIMIT 3
+I, [2017-11-09T11:54:08.862116 #18081]  INFO -- :   Rendered main/index.html.erb within layouts/main (3.2ms)
+I, [2017-11-09T11:54:08.872442 #18081]  INFO -- : Completed 200 OK in 16ms (Views: 12.9ms | ActiveRecord: 1.1ms)
+I, [2017-11-09T11:54:09.141615 #18081]  INFO -- : Started GET "/assets/bootstrap.min.css" for 181.114.124.108 at 2017-11-09 11:54:09 -0500
+I, [2017-11-09T11:54:09.151075 #18092]  INFO -- : Started GET "/assets/bootstrap.min.js" for 181.114.124.108 at 2017-11-09 11:54:09 -0500
+I, [2017-11-09T11:54:09.153373 #18100]  INFO -- : Started GET "/assets/responsive.css" for 181.114.124.108 at 2017-11-09 11:54:09 -0500
+I, [2017-11-09T11:54:09.162930 #18081]  INFO -- : Started GET "/assets/jquery.js" for 181.114.124.108 at 2017-11-09 11:54:09 -0500
+I, [2017-11-09T11:54:09.189222 #18108]  INFO -- : Started GET "/assets/animate.css" for 181.114.124.108 at 2017-11-09 11:54:09 -0500
+I, [2017-11-09T11:54:09.196162 #18081]  INFO -- : Started GET "/assets/main.css" for 181.114.124.108 at 2017-11-09 11:54:09 -0500
+I, [2017-11-09T11:54:09.331006 #18081]  INFO -- : Started GET "/assets/jquery.parallax.js" for 181.114.124.108 at 2017-11-09 11:54:09 -0500
+I, [2017-11-09T11:54:09.351376 #18081]  INFO -- : Started GET "/assets/application.js" for 181.114.124.108 at 2017-11-09 11:54:09 -0500
+I, [2017-11-09T11:54:09.587163 #18081]  INFO -- : Started GET "/assets/logos/logo.png" for 181.114.124.108 at 2017-11-09 11:54:09 -0500
+I, [2017-11-09T11:54:09.927781 #18092]  INFO -- : Started GET "/assets/logos/logo-braidot.png" for 181.114.124.108 at 2017-11-09 11:54:09 -0500
+I, [2017-11-09T11:54:09.930717 #18100]  INFO -- : Started GET "/assets/about-us/background-blue.jpg" for 181.114.124.108 at 2017-11-09 11:54:09 -0500
+I, [2017-11-09T11:54:09.936703 #18081]  INFO -- : Started GET "/assets/logos/salamanca2.png" for 181.114.124.108 at 2017-11-09 11:54:09 -0500
+I, [2017-11-09T11:54:09.940464 #18081]  INFO -- : Started GET "/assets/slider/home-pattern.png" for 181.114.124.108 at 2017-11-09 11:54:09 -0500
+I, [2017-11-09T11:54:09.941695 #18108]  INFO -- : Started GET "/assets/our-team/imagen-cursos-1.jpg" for 181.114.124.108 at 2017-11-09 11:54:09 -0500
+I, [2017-11-09T11:54:09.945237 #18123]  INFO -- : Started GET "/assets/our-team/unm-oferta-academica-2.png" for 181.114.124.108 at 2017-11-09 11:54:09 -0500
+I, [2017-11-09T11:54:10.110489 #18081]  INFO -- : Started GET "/assets/our-team/unm-oferta-academica-1.png" for 181.114.124.108 at 2017-11-09 11:54:10 -0500
+I, [2017-11-09T11:54:10.112929 #18092]  INFO -- : Started GET "/assets/our-team/imagen-cursos-2.jpg" for 181.114.124.108 at 2017-11-09 11:54:10 -0500
+I, [2017-11-09T11:54:10.124165 #18108]  INFO -- : Started GET "/assets/clients/img-web-unm-2.jpg" for 181.114.124.108 at 2017-11-09 11:54:10 -0500
+I, [2017-11-09T11:54:10.128518 #18100]  INFO -- : Started GET "/assets/our-team/imagen-cursos-3.jpg" for 181.114.124.108 at 2017-11-09 11:54:10 -0500
+I, [2017-11-09T11:54:10.136173 #18081]  INFO -- : Started GET "/assets/our-team/imagen-cursos-4.jpg" for 181.114.124.108 at 2017-11-09 11:54:10 -0500
+I, [2017-11-09T11:54:10.278655 #18081]  INFO -- : Started GET "/assets/clients/background-black-copy.png" for 181.114.124.108 at 2017-11-09 11:54:10 -0500
+I, [2017-11-09T11:54:10.285664 #18081]  INFO -- : Started GET "/assets/neuro1.jpg" for 181.114.124.108 at 2017-11-09 11:54:10 -0500
+I, [2017-11-09T11:54:10.287622 #18081]  INFO -- : Started GET "/assets/neuro2.jpg" for 181.114.124.108 at 2017-11-09 11:54:10 -0500
+I, [2017-11-09T11:54:10.290368 #18081]  INFO -- : Started GET "/assets/neuro3.jpg" for 181.114.124.108 at 2017-11-09 11:54:10 -0500
+I, [2017-11-09T11:54:10.295127 #18081]  INFO -- : Started GET "/assets/tecno1.jpg" for 181.114.124.108 at 2017-11-09 11:54:10 -0500
+I, [2017-11-09T11:54:10.441615 #18081]  INFO -- : Started GET "/assets/tecno2.jpg" for 181.114.124.108 at 2017-11-09 11:54:10 -0500
+I, [2017-11-09T11:54:10.450241 #18081]  INFO -- : Started GET "/assets/tecno3.jpg" for 181.114.124.108 at 2017-11-09 11:54:10 -0500
+I, [2017-11-09T11:54:10.456844 #18081]  INFO -- : Started GET "/assets/logos/logo-2.png" for 181.114.124.108 at 2017-11-09 11:54:10 -0500
+I, [2017-11-09T11:54:10.458467 #18092]  INFO -- : Started GET "/assets/logos/logo-fb-gris.png" for 181.114.124.108 at 2017-11-09 11:54:10 -0500
+I, [2017-11-09T11:54:19.048786 #18081]  INFO -- : Started GET "/assets/animate.css" for 181.114.124.108 at 2017-11-09 11:54:19 -0500
+I, [2017-11-09T11:54:19.052818 #18092]  INFO -- : Started GET "/assets/main.css" for 181.114.124.108 at 2017-11-09 11:54:19 -0500
+I, [2017-11-09T11:54:19.056557 #18108]  INFO -- : Started GET "/assets/bootstrap.min.css" for 181.114.124.108 at 2017-11-09 11:54:19 -0500
+I, [2017-11-09T11:54:19.047926 #18100]  INFO -- : Started GET "/assets/responsive.css" for 181.114.124.108 at 2017-11-09 11:54:19 -0500
