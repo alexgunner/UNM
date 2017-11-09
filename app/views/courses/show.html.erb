@@ -1,23 +1,19 @@
-<section id="page-content">
-  <div class="container">
-    <p id="notice"><%= notice %></p>
+<p id="notice"><%= notice %></p>
 
-    <p>
-      <strong>Nombre:</strong>
-      <%= @course.name %>
-    </p>
+<p>
+  <strong>Name:</strong>
+  <%= @course.name %>
+</p>
 
-    <p>
-      <strong>Contenido:</strong>
-      <%= @course.content %>
-    </p>
+<p>
+  <strong>Decription:</strong>
+  <%= @course.decription %>
+</p>
 
-    <p>
-      <strong>Tipo:</strong>
-      <%= @course.type %>
-    </p>
+<p>
+  <strong>Course type:</strong>
+  <%= @course.course_type %>
+</p>
 
-    <%= link_to 'Editar curso', edit_course_path(@course) %> |
-    <%= link_to 'Atras', courses_path %>
-  </div>
-</section>
+<%= link_to 'Edit', edit_course_path(@course) %> |
+<%= link_to 'Back', courses_path %>

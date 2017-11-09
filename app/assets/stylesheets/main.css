@@ -610,10 +610,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .second-live-the-experience-bg{
-	background: url("clients/background-black.jpg") no-repeat left;
+	background: url("clients/background-black-copy.png") no-repeat left;
 	top: 0;
 	background-size: 1200px;
-	background-color: black;
+	background-color: rgb(4, 48, 107);
 	display: none;
 	width: 100%;
 	height: 100%;

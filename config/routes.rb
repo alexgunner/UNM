@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :courses
   resources :info_texts
   resources :notices
   resources :courses

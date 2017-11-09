@@ -4596,3 +4596,76 @@ I, [2017-10-03T16:30:25.361124 #11078]  INFO -- : Started GET "/assets/clients/i
 I, [2017-10-03T16:30:25.483473 #11078]  INFO -- : Started GET "/assets/clients/background-black.jpg" for 190.181.36.140 at 2017-10-03 16:30:25 +0000
 I, [2017-10-03T16:30:25.519029 #11078]  INFO -- : Started GET "/assets/logos/logo-2.png" for 190.181.36.140 at 2017-10-03 16:30:25 +0000
 I, [2017-10-03T16:30:25.527689 #11078]  INFO -- : Started GET "/assets/logos/logo-fb-gris.png" for 190.181.36.140 at 2017-10-03 16:30:25 +0000
+D, [2017-10-26T16:26:47.505543 #24585] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+I, [2017-10-26T16:26:47.512575 #24585]  INFO -- : Migrating to CreateCourses (20171024153451)
+D, [2017-10-26T16:26:47.512971 #24585] DEBUG -- :   [1m[35m (0.1ms)[0m  begin transaction
+D, [2017-10-26T16:26:47.514122 #24585] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mCREATE TABLE "courses" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "decription" text, "course_type" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+E, [2017-10-26T16:26:47.514174 #24585] ERROR -- : SQLite3::SQLException: table "courses" already exists: CREATE TABLE "courses" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "decription" text, "course_type" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+D, [2017-10-26T16:26:47.514337 #24585] DEBUG -- :   [1m[35m (0.0ms)[0m  rollback transaction
+D, [2017-10-26T16:27:13.804873 #24601] DEBUG -- :   [1m[36m (6.2ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+D, [2017-10-26T16:27:13.805104 #24601] DEBUG -- :   [1m[35m (0.1ms)[0m  select sqlite_version(*)
+D, [2017-10-26T16:27:13.810175 #24601] DEBUG -- :   [1m[36m (4.7ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+D, [2017-10-26T16:27:13.810793 #24601] DEBUG -- :   [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+I, [2017-10-26T16:27:13.813661 #24601]  INFO -- : Migrating to CreateUsers (20170628222647)
+D, [2017-10-26T16:27:13.814028 #24601] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+D, [2017-10-26T16:27:13.815420 #24601] DEBUG -- :   [1m[35m (0.2ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "password_digest" varchar, "remember_digest" varchar, "status" varchar, "created_at" datetime, "updated_at" datetime) 
+D, [2017-10-26T16:27:13.821476 #24601] DEBUG -- :   [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170628222647"]]
+D, [2017-10-26T16:27:13.826577 #24601] DEBUG -- :   [1m[35m (4.9ms)[0m  commit transaction
+I, [2017-10-26T16:27:13.826634 #24601]  INFO -- : Migrating to CreateComments (20170629035711)
+D, [2017-10-26T16:27:13.826988 #24601] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+D, [2017-10-26T16:27:13.827774 #24601] DEBUG -- :   [1m[35m (0.2ms)[0m  CREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "content" text, "created_at" datetime, "updated_at" datetime) 
+D, [2017-10-26T16:27:13.828416 #24601] DEBUG -- :   [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170629035711"]]
+D, [2017-10-26T16:27:13.833430 #24601] DEBUG -- :   [1m[35m (4.9ms)[0m  commit transaction
+I, [2017-10-26T16:27:13.833483 #24601]  INFO -- : Migrating to AddAttachmentPhotoToComments (20170629035840)
+D, [2017-10-26T16:27:13.833851 #24601] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+D, [2017-10-26T16:27:13.834370 #24601] DEBUG -- :   [1m[35m (0.2ms)[0m  ALTER TABLE "comments" ADD "photo_file_name" varchar
+D, [2017-10-26T16:27:13.834650 #24601] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mALTER TABLE "comments" ADD "photo_content_type" varchar[0m
+D, [2017-10-26T16:27:13.834908 #24601] DEBUG -- :   [1m[35m (0.1ms)[0m  ALTER TABLE "comments" ADD "photo_file_size" integer
+D, [2017-10-26T16:27:13.835176 #24601] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mALTER TABLE "comments" ADD "photo_updated_at" datetime[0m
+D, [2017-10-26T16:27:13.835795 #24601] DEBUG -- :   [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20170629035840"]]
+D, [2017-10-26T16:27:13.839148 #24601] DEBUG -- :   [1m[36m (3.2ms)[0m  [1mcommit transaction[0m
+I, [2017-10-26T16:27:13.839202 #24601]  INFO -- : Migrating to CreateCovers (20170629051027)
+D, [2017-10-26T16:27:13.839522 #24601] DEBUG -- :   [1m[35m (0.0ms)[0m  begin transaction
+D, [2017-10-26T16:27:13.840272 #24601] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mCREATE TABLE "covers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "description" varchar, "created_at" datetime, "updated_at" datetime) [0m
+D, [2017-10-26T16:27:13.840937 #24601] DEBUG -- :   [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20170629051027"]]
+D, [2017-10-26T16:27:13.845717 #24601] DEBUG -- :   [1m[36m (4.6ms)[0m  [1mcommit transaction[0m
+I, [2017-10-26T16:27:13.845774 #24601]  INFO -- : Migrating to AddAttachmentImageToCovers (20170629051052)
+D, [2017-10-26T16:27:13.846129 #24601] DEBUG -- :   [1m[35m (0.0ms)[0m  begin transaction
+D, [2017-10-26T16:27:13.846631 #24601] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mALTER TABLE "covers" ADD "image_file_name" varchar[0m
+D, [2017-10-26T16:27:13.846903 #24601] DEBUG -- :   [1m[35m (0.1ms)[0m  ALTER TABLE "covers" ADD "image_content_type" varchar
+D, [2017-10-26T16:27:13.847162 #24601] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mALTER TABLE "covers" ADD "image_file_size" integer[0m
+D, [2017-10-26T16:27:13.847418 #24601] DEBUG -- :   [1m[35m (0.1ms)[0m  ALTER TABLE "covers" ADD "image_updated_at" datetime
+D, [2017-10-26T16:27:13.852572 #24601] DEBUG -- :   [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170629051052"]]
+D, [2017-10-26T16:27:13.856243 #24601] DEBUG -- :   [1m[35m (3.5ms)[0m  commit transaction
+I, [2017-10-26T16:27:13.856294 #24601]  INFO -- : Migrating to CreateNotices (20170629161657)
+D, [2017-10-26T16:27:13.856591 #24601] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+D, [2017-10-26T16:27:13.857369 #24601] DEBUG -- :   [1m[35m (0.2ms)[0m  CREATE TABLE "notices" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "link" varchar, "created_at" datetime, "updated_at" datetime) 
+D, [2017-10-26T16:27:13.858024 #24601] DEBUG -- :   [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170629161657"]]
+D, [2017-10-26T16:27:13.863153 #24601] DEBUG -- :   [1m[35m (5.0ms)[0m  commit transaction
+I, [2017-10-26T16:27:13.863206 #24601]  INFO -- : Migrating to AddAttachmentImageToNotices (20170629161737)
+D, [2017-10-26T16:27:13.863528 #24601] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+D, [2017-10-26T16:27:13.864057 #24601] DEBUG -- :   [1m[35m (0.2ms)[0m  ALTER TABLE "notices" ADD "image_file_name" varchar
+D, [2017-10-26T16:27:13.864337 #24601] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mALTER TABLE "notices" ADD "image_content_type" varchar[0m
+D, [2017-10-26T16:27:13.864620 #24601] DEBUG -- :   [1m[35m (0.2ms)[0m  ALTER TABLE "notices" ADD "image_file_size" integer
+D, [2017-10-26T16:27:13.864875 #24601] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mALTER TABLE "notices" ADD "image_updated_at" datetime[0m
+D, [2017-10-26T16:27:13.865541 #24601] DEBUG -- :   [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20170629161737"]]
+D, [2017-10-26T16:27:13.869383 #24601] DEBUG -- :   [1m[36m (3.7ms)[0m  [1mcommit transaction[0m
+I, [2017-10-26T16:27:13.869435 #24601]  INFO -- : Migrating to CreateInfoTexts (20170629164247)
+D, [2017-10-26T16:27:13.869736 #24601] DEBUG -- :   [1m[35m (0.1ms)[0m  begin transaction
+D, [2017-10-26T16:27:13.870442 #24601] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mCREATE TABLE "info_texts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "content" text, "created_at" datetime, "updated_at" datetime) [0m
+D, [2017-10-26T16:27:13.871087 #24601] DEBUG -- :   [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20170629164247"]]
+D, [2017-10-26T16:27:13.875774 #24601] DEBUG -- :   [1m[36m (4.5ms)[0m  [1mcommit transaction[0m
+I, [2017-10-26T16:27:13.875836 #24601]  INFO -- : Migrating to CreateCourses (20171024153451)
+D, [2017-10-26T16:27:13.876181 #24601] DEBUG -- :   [1m[35m (0.1ms)[0m  begin transaction
+D, [2017-10-26T16:27:13.876736 #24601] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mCREATE TABLE "courses" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "decription" text, "course_type" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+D, [2017-10-26T16:27:13.877429 #24601] DEBUG -- :   [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20171024153451"]]
+D, [2017-10-26T16:27:13.882426 #24601] DEBUG -- :   [1m[36m (4.9ms)[0m  [1mcommit transaction[0m
+D, [2017-10-26T16:27:20.414259 #24605] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+D, [2017-10-26T16:27:20.505639 #24605] DEBUG -- :   [1m[35m (0.1ms)[0m  begin transaction
+D, [2017-10-26T16:27:20.522814 #24605] DEBUG -- :   [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'admin@admin.com' LIMIT 1[0m
+D, [2017-10-26T16:27:20.524057 #24605] DEBUG -- :   [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Administrador"], ["email", "admin@admin.com"], ["password_digest", "$2a$10$GwUf7ec.kR.MIeQxQ7BYGuB7wnjN6nHzxcDo1R26MJLiO/J61QC2i"], ["created_at", "2017-10-26 16:27:20.523129"], ["updated_at", "2017-10-26 16:27:20.523129"]]
+D, [2017-10-26T16:27:20.528684 #24605] DEBUG -- :   [1m[36m (4.3ms)[0m  [1mcommit transaction[0m
+D, [2017-10-26T16:28:04.930444 #24786] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+D, [2017-10-26T16:28:05.031171 #24786] DEBUG -- :   [1m[35m (0.1ms)[0m  begin transaction
+D, [2017-10-26T16:28:05.045672 #24786] DEBUG -- :   [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'admin@admin.com' LIMIT 1[0m
+D, [2017-10-26T16:28:05.058840 #24786] DEBUG -- :   [1m[35m (0.1ms)[0m  rollback transaction

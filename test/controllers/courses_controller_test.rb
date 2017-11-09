@@ -1,48 +1,49 @@
 require 'test_helper'
 
-class CoursesControllerTest < ActionDispatch::IntegrationTest
+class CoursesControllerTest < ActionController::TestCase
   setup do
     @course = courses(:one)
   end
 
   test "should get index" do
-    get courses_url
+    get :index
     assert_response :success
+    assert_not_nil assigns(:courses)
   end
 
   test "should get new" do
-    get new_course_url
+    get :new
     assert_response :success
   end
 
   test "should create course" do
     assert_difference('Course.count') do
-      post courses_url, params: { course: { content: @course.content, name: @course.name, type: @course.type } }
+      post :create, course: { course_type: @course.course_type, decription: @course.decription, name: @course.name }
     end
 
-    assert_redirected_to course_url(Course.last)
+    assert_redirected_to course_path(assigns(:course))
   end
 
   test "should show course" do
-    get course_url(@course)
+    get :show, id: @course
     assert_response :success
   end
 
   test "should get edit" do
-    get edit_course_url(@course)
+    get :edit, id: @course
     assert_response :success
   end
 
   test "should update course" do
-    patch course_url(@course), params: { course: { content: @course.content, name: @course.name, type: @course.type } }
-    assert_redirected_to course_url(@course)
+    patch :update, id: @course, course: { course_type: @course.course_type, decription: @course.decription, name: @course.name }
+    assert_redirected_to course_path(assigns(:course))
   end
 
   test "should destroy course" do
     assert_difference('Course.count', -1) do
-      delete course_url(@course)
+      delete :destroy, id: @course
     end
 
-    assert_redirected_to courses_url
+    assert_redirected_to courses_path
   end
 end

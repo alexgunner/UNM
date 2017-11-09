@@ -6,5 +6,6 @@ class MainController < ApplicationController
     @whoWeAre = InfoText.find_by(title: "Quienes somos")
     @academicOffers = InfoText.find_by(title: "Ofertas academicas")
     @liveTheExperience = InfoText.find_by(title: "Vive la experiencia")
+    @courses = Course.all
   end
 end
