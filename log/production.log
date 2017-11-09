@@ -4669,3 +4669,50 @@ D, [2017-10-26T16:28:04.930444 #24786] DEBUG -- :   [1m[36mActiveRecord::Schem
 D, [2017-10-26T16:28:05.031171 #24786] DEBUG -- :   [1m[35m (0.1ms)[0m  begin transaction
 D, [2017-10-26T16:28:05.045672 #24786] DEBUG -- :   [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'admin@admin.com' LIMIT 1[0m
 D, [2017-10-26T16:28:05.058840 #24786] DEBUG -- :   [1m[35m (0.1ms)[0m  rollback transaction
+D, [2017-11-09T11:38:29.045993 #16776] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+I, [2017-11-09T11:40:13.768340 #16921]  INFO -- : Started GET "/" for 181.114.124.108 at 2017-11-09 11:40:13 -0500
+I, [2017-11-09T11:40:13.798145 #16921]  INFO -- : Processing by MainController#index as HTML
+D, [2017-11-09T11:40:13.828306 #16921] DEBUG -- :   [1m[36mInfoText Load (0.5ms)[0m  [1mSELECT  "info_texts".* FROM "info_texts" WHERE "info_texts"."title" = ? LIMIT 1[0m  [["title", "Quienes somos"]]
+D, [2017-11-09T11:40:13.828856 #16921] DEBUG -- :   [1m[35mInfoText Load (0.1ms)[0m  SELECT  "info_texts".* FROM "info_texts" WHERE "info_texts"."title" = ? LIMIT 1  [["title", "Ofertas academicas"]]
+D, [2017-11-09T11:40:13.829221 #16921] DEBUG -- :   [1m[36mInfoText Load (0.1ms)[0m  [1mSELECT  "info_texts".* FROM "info_texts" WHERE "info_texts"."title" = ? LIMIT 1[0m  [["title", "Vive la experiencia"]]
+D, [2017-11-09T11:40:13.838490 #16921] DEBUG -- :   [1m[35mCover Load (0.3ms)[0m  SELECT  "covers".* FROM "covers" LIMIT 3
+D, [2017-11-09T11:40:13.839842 #16921] DEBUG -- :   [1m[36mCourse Load (0.1ms)[0m  [1mSELECT "courses".* FROM "courses"[0m
+D, [2017-11-09T11:40:13.840864 #16921] DEBUG -- :   [1m[35mComment Load (0.2ms)[0m  SELECT  "comments".* FROM "comments" LIMIT 3
+D, [2017-11-09T11:40:13.842116 #16921] DEBUG -- :   [1m[36mNotice Load (0.1ms)[0m  [1mSELECT  "notices".* FROM "notices" LIMIT 3[0m
+I, [2017-11-09T11:40:13.842900 #16921]  INFO -- :   Rendered main/index.html.erb within layouts/main (9.0ms)
+I, [2017-11-09T11:40:13.844807 #16921]  INFO -- : Completed 500 Internal Server Error in 46ms (ActiveRecord: 3.3ms)
+F, [2017-11-09T11:40:13.846776 #16921] FATAL -- : 
+SyntaxError (/home/rails/UNM/app/views/layouts/main.html.erb:6: syntax error, unexpected ':', expecting =>
+...'all', 'data-turbolinks-track': 'reload' );@output_buffer.sa...
+...                               ^
+/home/rails/UNM/app/views/layouts/main.html.erb:7: syntax error, unexpected ':', expecting =>
+...'all', 'data-turbolinks-track': 'reload' );@output_buffer.sa...
+...                               ^
+/home/rails/UNM/app/views/layouts/main.html.erb:8: syntax error, unexpected ':', expecting =>
+...'all', 'data-turbolinks-track': 'reload' );@output_buffer.sa...
+...                               ^
+/home/rails/UNM/app/views/layouts/main.html.erb:9: syntax error, unexpected ':', expecting =>
+...'all', 'data-turbolinks-track': 'reload' );@output_buffer.sa...
+...                               ^
+/home/rails/UNM/app/views/layouts/main.html.erb:12: syntax error, unexpected ':', expecting ')'
+...uery', 'data-turbolinks-track': 'reload' );@output_buffer.sa...
+...                               ^
+/home/rails/UNM/app/views/layouts/main.html.erb:13: syntax error, unexpected ':', expecting ')'
+....min', 'data-turbolinks-track': 'reload' );@output_buffer.sa...
+...                               ^
+/home/rails/UNM/app/views/layouts/main.html.erb:14: syntax error, unexpected ':', expecting ')'
+...llax', 'data-turbolinks-track': 'reload' );@output_buffer.sa...
+...                               ^
+/home/rails/UNM/app/views/layouts/main.html.erb:15: syntax error, unexpected ':', expecting ')'
+...tion', 'data-turbolinks-track': 'reload' );@output_buffer.sa...
+...                               ^):
+  app/views/layouts/main.html.erb:6: syntax error, unexpected ':', expecting =>
+  app/views/layouts/main.html.erb:7: syntax error, unexpected ':', expecting =>
+  app/views/layouts/main.html.erb:8: syntax error, unexpected ':', expecting =>
+  app/views/layouts/main.html.erb:9: syntax error, unexpected ':', expecting =>
+  app/views/layouts/main.html.erb:12: syntax error, unexpected ':', expecting ')'
+  app/views/layouts/main.html.erb:13: syntax error, unexpected ':', expecting ')'
+  app/views/layouts/main.html.erb:14: syntax error, unexpected ':', expecting ')'
+  app/views/layouts/main.html.erb:15: syntax error, unexpected ':', expecting ')'
+
+
