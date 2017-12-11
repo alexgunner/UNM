@@ -1,17 +1,14 @@
 Rails.application.routes.draw do
+  devise_for :users
   resources :courses
   resources :info_texts
   resources :notices
   resources :courses
   resources :covers
   resources :comments
-  resources :users
 
   get '/list_courses/:id', to: 'courses#list_courses'
-  get '/dashboard', to: 'users#main'
-  get '/login', to: 'sessions#new'
-  post '/login', to: 'sessions#create'
-  delete '/logout', to: 'sessions#destroy'
+  get '/dashboard', to: 'admin#dashboard'
 
   #get '/live-the-experience', to: 'videos#index'
   root 'main#index'

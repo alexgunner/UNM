@@ -41,8 +41,18 @@
 			<li data-target="#main-carousel" data-slide-to="0" class="active"></li>
 			<li data-target="#main-carousel" data-slide-to="1"></li>
 			<li data-target="#main-carousel" data-slide-to="2"></li>
+			<li data-target="#main-carousel" data-slide-to="3"></li>
 		</ol><!--/.carousel-indicators-->
 		<div class="carousel-inner">
+			<div class="item">
+				<div class="embed-responsive embed-responsive-21by9">
+					<center>
+						<video autoplay>
+						 	<source src="/assets/facebook.mp4" type="video/mp4">
+						</video> 
+					</center>
+				</div>
+			</div>
 			<% @covers.each do |cover| %>
 				<% if @covers[0] == cover %>
 					<div class="item active" style="background-image: url(<%= cover.image.url %>)">
@@ -57,7 +67,6 @@
 					</div>
 				</div>
 			<% end %>
-
 	  </div><!--/.carousel-inner-->
   </div>
 

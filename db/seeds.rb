@@ -7,4 +7,5 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-User.create! name: "Administrador", email: "admin@admin.com", password: "adminadmin", password_confirmation: "adminadmin"
+User.create! email: "admin@admin.com", password: "adminadmin", password_confirmation: "adminadmin"
+puts "Administrator user seeded"

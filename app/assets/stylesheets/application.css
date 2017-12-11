@@ -18,6 +18,10 @@
  ======Header CSS=====
  ======================*/
 
+a {
+	text-decoration: none;
+}
+
 
 
  #navigation .brand,
@@ -194,3 +198,13 @@
  #footer a {
  	color:#fc7700
  }
+
+
+ /*====================
+ =======Admin CSS======
+ ======================*/
+
+.admin-icon {
+	font-size: 10vw;
+	text-align: center;
+}

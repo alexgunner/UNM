@@ -27,7 +27,7 @@ gem "paperclip", "~> 4.3"
 
 gem 'tzinfo-data'
 
-gem 'sorcery'
+gem 'devise'
 
 gem 'bootstrap-sass'
 
