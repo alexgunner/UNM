@@ -1,7 +1,7 @@
 class InfoTextsController < ApplicationController
   before_action :set_info_text, only: [:show, :edit, :update, :destroy]
   before_action :check_credentials
-
+  layout 'dashboard'
   # GET /info_texts
   # GET /info_texts.json
   def index

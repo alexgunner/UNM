@@ -11,17 +11,18 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :titulo %>
-    <%= form.text_field :title, id: :notice_title %>
+    <%= form.text_field :title, id: :notice_title, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :enlace %>
-    <%= form.text_field :link, id: :notice_link %>
+    <%= form.text_field :link, id: :notice_link, class: "form-control" %>
   </div>
 
   <div class="actions">
-    <%= form.submit :enviar %>
+    <%= form.submit "Aceptar", class: "btn btn-success" %>
+    <%= link_to "Atrás", notices_url, class: "btn btn-danger" %>
   </div>
 <% end %>

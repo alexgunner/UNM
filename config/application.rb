@@ -17,7 +17,8 @@ module EscuelaDeNegociosUnm
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
     config.perform_caching = true
-	config.action_controller.perform_caching = true
-  config.assets.paths << "#{Rails.root}/app/assets/videos"
+  	config.action_controller.perform_caching = true
+    config.assets.paths << "#{Rails.root}/app/assets/videos"
+    
   end
 end

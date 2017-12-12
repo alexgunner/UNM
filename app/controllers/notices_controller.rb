@@ -1,6 +1,7 @@
 class NoticesController < ApplicationController
   before_action :set_notice, only: [:show, :edit, :update, :destroy]
   before_action :check_credentials
+  layout 'dashboard'
 
   # GET /notices
   # GET /notices.json

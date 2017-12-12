@@ -7,4 +7,8 @@ class AdminController < ApplicationController
 			redirect_to :root
 		end
 	end
+	
+	def login
+		redirect_to '/users/sign_in'
+	end
 end

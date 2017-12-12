@@ -11,21 +11,22 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :titulo %>
-    <%= form.text_field :title, id: :cover_title %>
+    <%= form.text_field :title, id: :cover_title, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :descripcion %>
-    <%= form.text_field :description, id: :cover_description %>
+    <%= form.text_field :description, id: :cover_description, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.file_field :image %>
   </div>
 
   <div class="actions">
-    <%= form.submit :enviar %>
+    <%= form.submit "Aceptar", class: "btn btn-success" %>
+    <%= link_to "Atrás", "/covers", class: "btn btn-danger" %>
   </div>
 <% end %>

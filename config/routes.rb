@@ -9,6 +9,7 @@ Rails.application.routes.draw do
 
   get '/list_courses/:id', to: 'courses#list_courses'
   get '/dashboard', to: 'admin#dashboard'
+  get '/login', to: 'admin#login'
 
   #get '/live-the-experience', to: 'videos#index'
   root 'main#index'

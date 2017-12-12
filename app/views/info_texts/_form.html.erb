@@ -11,17 +11,18 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :titulo %>
-    <%= form.select :title, options_for_select([ "Quienes somos", "Ofertas Academicas", "Vive la experiencia" ], "Quienes somos"), id: :info_text_title %>
+    <%= form.select :title, options_for_select([ "Quienes somos", "Ofertas Academicas", "Vive la experiencia" ], "Quienes somos"), id: :info_text_title, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :contenido %>
-    <%= form.text_area :content, id: :info_text_content %>
+    <%= form.text_area :content, id: :info_text_content, class: "form-control" %>
   </div>
 
   <div class="actions">
-    <%= form.submit :enviar %>
+    <%= form.submit "Aceptar", class: "btn btn-success" %>
+    <%= link_to "Atrás", info_texts_url, class: "btn btn-danger" %>
   </div>
 <% end %>

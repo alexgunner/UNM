@@ -1,6 +1,7 @@
 class CoversController < ApplicationController
   before_action :set_cover, only: [:show, :edit, :update, :destroy]
   before_action :check_credentials
+  layout "dashboard"
 
   # GET /covers
   # GET /covers.json
